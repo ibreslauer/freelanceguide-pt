@@ -10,40 +10,122 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body>
+	<body class="bg-white">
 		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
+		
+		<!-- Hero Section -->
+		<section class="bg-linear-to-b from-slate-50 to-white py-20 md:py-32">
+			<div class="max-w-6xl mx-auto px-6">
+				<div class="max-w-4xl mx-auto text-center">
+					<h1 class="text-5xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
+						Freelancing in Portugal, simplified.
+					</h1>
+					<p class="text-xl md:text-2xl text-slate-600 mb-10 leading-relaxed">
+						Navigate taxes, stay compliant with Finanças, and build a thriving independent business. Expert guidance for Portuguese freelancers at every stage.
+					</p>
+					<div class="flex flex-col sm:flex-row gap-4 justify-center">
+						<a href="/blog" class="group inline-flex items-center justify-center gap-2 text-white bg-teal-600 hover:bg-teal-700 font-semibold px-8 py-4 rounded-lg transition-all hover:shadow-lg hover:shadow-teal-600/30 hover:-translate-y-0.5 no-underline">
+							<span class="text-white">Get Started</span>
+							<svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+							</svg>
+						</a>
+						<a href="/blog" class="group inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-teal-700 font-semibold px-8 py-4 rounded-lg border-2 border-teal-600 transition-all hover:shadow-md hover:-translate-y-0.5 no-underline">
+							<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+							</svg>
+							<span class="text-teal-700">Browse Guides</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Benefits Section -->
+		<section class="py-20 md:py-28">
+			<div class="max-w-6xl mx-auto px-6">
+				<div class="grid md:grid-cols-3 gap-12">
+					<!-- Benefit 1 -->
+					<div class="text-center">
+            <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+							</svg>
+						</div>
+						<h3 class="text-2xl font-bold text-slate-900 mb-4">Save Time & Money</h3>
+						<p class="text-lg text-slate-600 leading-relaxed">
+              Save money on accountants and avoid costly mistakes. Get clear, actionable answers from guides built specifically for Portugal.
+						</p>
+					</div>
+          
+          <!-- Benefit 2 -->
+					<div class="text-center">
+            <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+							</svg>
+						</div>
+						<h3 class="text-2xl font-bold text-slate-900 mb-4">Stay Informed & Compliant</h3>
+						<p class="text-lg text-slate-600 leading-relaxed">
+              Understand your obligations with Finanças, from registering as a freelancer to filing quarterly taxes. No confusion, no penalties.
+						</p>
+					</div>
+          
+          <!-- Benefit 3 -->
+					<div class="text-center">
+						<div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
+							<svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+							</svg>
+						</div>
+						<h3 class="text-2xl font-bold text-slate-900 mb-4">Focus on Your Business</h3>
+						<p class="text-lg text-slate-600 leading-relaxed">
+							Focus on what you do best—serving your clients and growing your business—not how to navigate Finanças and PT bureaucracy.
+						</p>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Trust Section -->
+		<section class="bg-slate-50 py-20 md:py-28">
+			<div class="max-w-4xl mx-auto px-6 text-center">
+				<h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+					Built by freelancers, for freelancers
+				</h2>
+				<p class="text-xl text-slate-600 leading-relaxed">
+					We understand the challenges of working independently in Portugal because we've been there. Our guides cut through bureaucratic complexity to give you exactly what you need to know.
+				</p>
+			</div>
+		</section>
+
+		<!-- Final CTA Section -->
+		<section class="py-20 md:py-28">
+			<div class="max-w-4xl mx-auto px-6 text-center">
+				<h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+					Ready to master freelancing in Portugal?
+				</h2>
+				<p class="text-xl text-slate-600 mb-10 leading-relaxed">
+					Join hundreds of independent professionals who trust Freelance Guide for clear, practical advice on running their business in Portugal.
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4 justify-center">
+					<a href="/blog" class="group inline-flex items-center justify-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-8 py-4 rounded-lg transition-all hover:shadow-lg hover:shadow-teal-600/30 hover:-translate-y-0.5 no-underline">
+						<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+						</svg>
+						<span>Start Learning</span>
+					</a>
+					<a href="/blog" class="group inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-teal-700 font-semibold px-8 py-4 rounded-lg border-2 border-teal-600 transition-all hover:shadow-md hover:-translate-y-0.5 no-underline">
+						<span>View All Guides</span>
+						<svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</section>
+
 		<Footer />
 	</body>
 </html>
