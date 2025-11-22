@@ -1,48 +1,61 @@
-# Astro Starter Kit: Blog
+# FreelanceGuide.pt
 
-```sh
-npm create astro@latest -- --template blog
+Your complete guide to freelancing in Portugal. Learn how to stay compliant with Finanças, manage your business, and thrive as an independent professional.
+
+## About
+
+FreelanceGuide.pt is a comprehensive resource website helping Portuguese freelancers understand and navigate Finanças compliance through clear guides, cheat sheets, and step-by-step walkthroughs. Whether you're just starting out or looking to optimize your freelance business, we provide practical information on:
+
+- **Registration**: Step-by-step guides for registering with Finanças
+- **Tax Obligations**: Understanding your tax responsibilities and deadlines
+- **Invoicing Requirements**: How to properly invoice clients and maintain compliance
+- **Business Management**: Best practices for managing your freelance business in Portugal
+
+## 🚀 Getting Started
+
+This website is built with [Astro](https://astro.build), a modern static site generator.
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm or pnpm
+
+### Installation
+
+```bash
+npm install
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Development
 
-Features:
+```bash
+npm run dev
+```
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
+Visit `http://localhost:4321` to view the site locally.
 
-## 🚀 Project Structure
+### Build
 
-Inside of your Astro project, you'll see the following folders and files:
+```bash
+npm run build
+```
+
+The production-ready site will be generated in the `./dist/` directory.
+
+## 📁 Project Structure
 
 ```text
-├── public/
+├── public/          # Static assets
 ├── src/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
+│   ├── components/  # Reusable Astro components
+│   ├── content/     # Content collections (guides, blog posts)
+│   ├── layouts/     # Page layouts
+│   ├── pages/       # Page routes
+│   └── styles/      # Global styles
+└── astro.config.mjs # Astro configuration
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
+## 🧞 Available Commands
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
@@ -53,10 +66,18 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## 🤝 Contributing
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+We welcome contributions! If you have suggestions for improving guides or adding new content, please feel free to open an issue or submit a pull request.
 
-## Credit
+## 📝 License
 
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+This project is open source and available under the MIT License.
+
+## 📧 Contact
+
+For questions or feedback about FreelanceGuide.pt, please open an issue on this repository.
+
+---
+
+Built with ❤️ to help the Portuguese freelance community thrive.
