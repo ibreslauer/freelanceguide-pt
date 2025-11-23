@@ -1,5 +1,5 @@
 ---
-title: 'How to Pay IRS in Installments (Portal das Finanças)'
+title: 'How to Pay IRS in Installments (Portal das Finanças guide)'
 description: 'Step-by-step guide for Portuguese freelancers on how to split your IRS payment into installments through Portal das Finanças. Learn about Planos Prestacionais and how to set up a payment plan with the Portuguese Tax Authority.'
 pubDate: 2025-11-23
 heroImage: '../../assets/blog-placeholder-2.jpg'
