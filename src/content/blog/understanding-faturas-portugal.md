@@ -2,7 +2,7 @@
 title: "Understanding Fatura vs Fatura-Recibo in Portugal"
 description: "Learn the essential difference between Fatura and Fatura-Recibo for Portuguese freelancers. Understand which document to use for your Recibos Verdes invoicing to stay compliant with Autoridade Tributária."
 pubDate: 2025-11-22
-heroImage: "../../assets/blog-1-fatura-recibo-two-buttons.jpg"
+heroImage: "../../assets/blog-1-dilemma.jpg"
 ---
 
 If you work as a freelancer in Portugal under **Recibos Verdes (Green Receipts)**, understanding the difference between **Fatura** and **Fatura-Recibo** is crucial for proper invoicing and tax compliance. These two document types serve different purposes, and using the wrong one can lead to confusion or issues with the Portuguese Tax Authority (**Autoridade Tributária e Aduaneira**).
