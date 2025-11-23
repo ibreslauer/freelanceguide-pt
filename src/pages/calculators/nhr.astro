@@ -1,0 +1,660 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { SITE_TITLE } from "../../consts";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title="NHR Tax Calculator | Freelance Guide Portugal"
+      description="Calculate your annual tax liability under Portugal's Non-Habitual Resident (NHR) regime for independent workers."
+    />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <div class="calculator-container">
+        <div class="header-section">
+          <h1>NHR Tax Calculator</h1>
+          <p class="subtitle">
+            Calculate your annual tax liability under Portugal's Non-Habitual
+            Resident (NHR) regime for independent workers.
+          </p>
+        </div>
+
+        <div class="assumptions-card">
+          <h2>Assumptions</h2>
+          <p>This calculator assumes that:</p>
+          <ul>
+            <li>You are a tax resident in Portugal</li>
+            <li>
+              You benefit from the RNH status - Residente Não Habitual
+              (Non-Habitual Resident)
+            </li>
+            <li>
+              You are registered at the Portuguese Tax Authority as an
+              Independent Worker and are using the Regime Simplificado
+              (Simplified Regime)
+            </li>
+            <li>
+              All of your income results from a high-valued activity included
+              in the list for RNH
+            </li>
+            <li>
+              All of your income is from providing services (Prestação de serviços)
+              for Social Security calculation purposes
+            </li>
+            <li>
+              You are selecting the minimum Social Security contributions (applying
+              -25% variation to minimize payments)
+            </li>
+          </ul>
+        </div>
+
+        <div class="calculator-card">
+          <div class="form-section">
+            <h2>Annual Income</h2>
+            <div class="form-group">
+              <label for="grossIncome"
+                >Gross annual income / Rendimento bruto anual (€)</label
+              >
+              <input
+                type="number"
+                id="grossIncome"
+                min="0"
+                step="100"
+                placeholder="e.g., 50000"
+              />
+              <p class="hint">
+                Enter your total gross income from all high-valued activities
+                under NHR.
+              </p>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2>Segurança Social (Social Security)</h2>
+            <div class="form-group">
+              <label>Contributor type / Tipo de contribuinte</label>
+              <label class="radio-label">
+                <input
+                  type="radio"
+                  name="contributorType"
+                  value="0.214"
+                  checked
+                />
+                <span>Trabalhador Independente (Independent worker) (21.4%)</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="contributorType" value="0.252" />
+                <span>Empresário em Nome Individual (Sole proprietor) (25.2%)</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="results-card" id="results">
+          <h2>Income Tax Calculation</h2>
+          <div class="results-grid">
+            <div class="result-item">
+              <span class="result-label"
+                >Rendimento bruto (Gross income)</span
+              >
+              <span class="result-value" id="grossIncomeDisplay">€ 0.00</span>
+            </div>
+            <div class="result-item">
+              <span class="result-label"
+                >Coeficiente regime simplificado (Simplified regime
+                coefficient) - 75%</span
+              >
+              <span class="result-value" id="coefficient">€ 0.00</span>
+            </div>
+            <div class="result-item">
+              <span class="result-label"
+                >Rendimento tributável (Taxable income)</span
+              >
+              <span class="result-value" id="taxableIncome">€ 0.00</span>
+            </div>
+            <div class="result-item">
+              <span class="result-label"
+                >Taxa NHR (NHR tax rate) - 20%</span
+              >
+              <span class="result-value">20%</span>
+            </div>
+            <div class="result-item highlight">
+              <span class="result-label"
+                >Imposto anual estimado (Estimated annual income tax)</span
+              >
+              <span class="result-value" id="annualTax">€ 0.00</span>
+            </div>
+            <div class="result-item info">
+              <span class="result-label"
+                >Taxa efetiva de IRS (Effective income tax rate)</span
+              >
+              <span class="result-value" id="effectiveRate">0.00%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="results-card" id="ssResults">
+          <h2>Segurança Social Calculation</h2>
+          <div class="results-grid">
+            <div class="result-item">
+              <span class="result-label"
+                >Rendimento relevante (Relevant income) - 70%</span
+              >
+              <span class="result-value" id="relevantIncome">€ 0.00</span>
+            </div>
+            <div class="result-item">
+              <span class="result-label"
+                >Base mensal (Monthly base, BIC)</span
+              >
+              <span class="result-value" id="monthlyBase">€ 0.00</span>
+            </div>
+            <div class="result-item">
+              <span class="result-label"
+                >Teto máximo (Maximum ceiling - 12 × IAS)</span
+              >
+              <span class="result-value" id="maxCeiling">€ 0.00</span>
+            </div>
+            <div class="result-item">
+              <span class="result-label"
+                >Contribuição mensal (Monthly contribution)</span
+              >
+              <span class="result-value" id="monthlyContribution">€ 0.00</span>
+            </div>
+            <div class="result-item highlight">
+              <span class="result-label"
+                >Contribuição anual SS (Annual Social Security contribution)</span
+              >
+              <span class="result-value" id="annualSS">€ 0.00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="results-card final-results">
+          <h2>Final Take-Home Calculation</h2>
+          <div class="results-grid">
+            <div class="result-item">
+              <span class="result-label"
+                >Rendimento bruto (Gross income)</span
+              >
+              <span class="result-value" id="grossFinal">€ 0.00</span>
+            </div>
+            <div class="result-item">
+              <span class="result-label"
+                >IRS (Income tax)</span
+              >
+              <span class="result-value" id="taxFinal">€ 0.00</span>
+            </div>
+            <div class="result-item">
+              <span class="result-label"
+                >Segurança Social (Social Security)</span
+              >
+              <span class="result-value" id="ssFinal">€ 0.00</span>
+            </div>
+            <div class="result-item">
+              <span class="result-label"
+                >Total deductions / Deduções totais</span
+              >
+              <span class="result-value" id="totalDeductions">€ 0.00</span>
+            </div>
+            <div class="result-item final-highlight">
+              <span class="result-label"
+                >Rendimento líquido final (Final take-home income)</span
+              >
+              <span class="result-value" id="finalTakeHome">€ 0.00</span>
+            </div>
+            <div class="result-item info">
+              <span class="result-label"
+                >Taxa efetiva total (Total effective rate)</span
+              >
+              <span class="result-value" id="totalEffectiveRate">0.00%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="formula-card">
+          <h3>Calculation Formulas</h3>
+          <div class="formula">
+            <p>
+              <strong>Income Tax (IRS)</strong> = Gross Annual Income × 0.75 × 0.20
+            </p>
+            <p class="formula-explanation">
+              <strong>Step 1:</strong> Apply 75% coefficient (Regime
+              Simplificado deducts 25% for expenses)<br />
+              <strong>Step 2:</strong> Apply 20% flat tax rate (NHR rate for
+              high-valued activities)
+            </p>
+          </div>
+          <div class="formula" style="margin-top: 1rem;">
+            <p>
+              <strong>Social Security (SS)</strong> = min((Gross Income × 0.70 × 0.75) / 12, 12 × IAS) × Rate × 12
+            </p>
+            <p class="formula-explanation">
+              <strong>Step 1:</strong> Calculate relevant income (70% of gross for services)<br />
+              <strong>Step 2:</strong> Apply -25% variation (×0.75) for minimum contributions<br />
+              <strong>Step 3:</strong> Divide by 12 to get monthly base (BIC)<br />
+              <strong>Step 4:</strong> Apply ceiling of 12 × IAS (€6,270.00 for 2025)<br />
+              <strong>Step 5:</strong> Apply contribution rate (21.4% or 25.2%)<br />
+              <strong>Step 6:</strong> Multiply by 12 for annual contribution
+            </p>
+          </div>
+        </div>
+
+        <div class="disclaimer">
+          <p>
+            <strong>Important:</strong> This calculator provides estimates for informational
+            purposes only. Actual tax liability may vary based on individual circumstances,
+            deductions, and changes in tax legislation. For official information
+            and personalized advice, consult the
+            <a
+              href="https://www.portaldasfinancas.gov.pt"
+              target="_blank"
+              rel="noopener noreferrer">Portal das Finanças</a
+            >
+            or a qualified tax professional.
+          </p>
+          <p>
+            <strong>Note:</strong> The NHR regime has specific eligibility requirements
+            and may change. Verify your qualification with the Portuguese Tax Authority.
+            Social Security contributions are capped at 12 × IAS (2025: €6,270.00 monthly base).
+          </p>
+        </div>
+      </div>
+    </main>
+    <Footer />
+
+    <script>
+      function formatCurrency(value: number): string {
+        return new Intl.NumberFormat("pt-PT", {
+          style: "currency",
+          currency: "EUR",
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        }).format(value);
+      }
+
+      function formatPercent(value: number): string {
+        return value.toFixed(2) + "%";
+      }
+
+      function calculate() {
+        const IAS = 522.5; // IAS value for 2025
+        const grossIncome =
+          parseFloat(
+            (document.getElementById("grossIncome") as HTMLInputElement)?.value,
+          ) || 0;
+        const ssRate =
+          parseFloat(
+            (
+              document.querySelector(
+                'input[name="contributorType"]:checked',
+              ) as HTMLInputElement
+            )?.value,
+          ) || 0.214;
+
+        // Income Tax Calculation
+        const taxableIncome = grossIncome * 0.75;
+        const annualTax = taxableIncome * 0.2;
+        const effectiveTaxRate = grossIncome > 0 ? (annualTax / grossIncome) * 100 : 0;
+
+        // Social Security Calculation with ceiling and -25% variation (minimum contributions)
+        const relevantIncome = grossIncome * 0.7;
+        const adjustedRelevantIncome = relevantIncome * 0.75; // Apply -25% variation
+        const monthlyBase = adjustedRelevantIncome / 12;
+        
+        // Apply ceiling: 12 * IAS (monthly maximum base)
+        const maxMonthlyBase = 12 * IAS;
+        const cappedMonthlyBase = Math.min(monthlyBase, maxMonthlyBase);
+        
+        const monthlyContribution = cappedMonthlyBase * ssRate;
+        const annualSS = monthlyContribution * 12;
+        const maxCeiling = maxMonthlyBase * ssRate;
+
+        // Final Take-Home
+        const totalDeductions = annualTax + annualSS;
+        const finalTakeHome = grossIncome - totalDeductions;
+        const totalEffectiveRate = grossIncome > 0 ? (totalDeductions / grossIncome) * 100 : 0;
+
+        // Update Income Tax section
+        (
+          document.getElementById("grossIncomeDisplay") as HTMLElement
+        ).textContent = formatCurrency(grossIncome);
+        (document.getElementById("coefficient") as HTMLElement).textContent =
+          formatCurrency(taxableIncome);
+        (document.getElementById("taxableIncome") as HTMLElement).textContent =
+          formatCurrency(taxableIncome);
+        (document.getElementById("annualTax") as HTMLElement).textContent =
+          formatCurrency(annualTax);
+        (document.getElementById("effectiveRate") as HTMLElement).textContent =
+          formatPercent(effectiveTaxRate);
+
+        // Update Social Security section
+        (document.getElementById("relevantIncome") as HTMLElement).textContent =
+          formatCurrency(relevantIncome);
+        (document.getElementById("monthlyBase") as HTMLElement).textContent =
+          formatCurrency(monthlyBase);
+        (document.getElementById("maxCeiling") as HTMLElement).textContent =
+          formatCurrency(maxCeiling);
+        (document.getElementById("monthlyContribution") as HTMLElement).textContent =
+          formatCurrency(monthlyContribution);
+        (document.getElementById("annualSS") as HTMLElement).textContent =
+          formatCurrency(annualSS);
+
+        // Update Final Take-Home section
+        (document.getElementById("grossFinal") as HTMLElement).textContent =
+          formatCurrency(grossIncome);
+        (document.getElementById("taxFinal") as HTMLElement).textContent =
+          formatCurrency(annualTax);
+        (document.getElementById("ssFinal") as HTMLElement).textContent =
+          formatCurrency(annualSS);
+        (document.getElementById("totalDeductions") as HTMLElement).textContent =
+          formatCurrency(totalDeductions);
+        (document.getElementById("finalTakeHome") as HTMLElement).textContent =
+          formatCurrency(finalTakeHome);
+        (document.getElementById("totalEffectiveRate") as HTMLElement).textContent =
+          formatPercent(totalEffectiveRate);
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        document
+          .getElementById("grossIncome")
+          ?.addEventListener("input", calculate);
+        document
+          .querySelectorAll('input[name="contributorType"]')
+          .forEach((radio) => {
+            radio.addEventListener("change", calculate);
+          });
+        calculate();
+      });
+    </script>
+
+    <style>
+      main {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+      }
+
+      .calculator-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 3rem 1.5rem;
+      }
+
+      .header-section {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .header-section h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: rgb(15, 23, 42);
+      }
+
+      .subtitle {
+        font-size: 1.125rem;
+        color: rgb(100, 116, 139);
+        margin: 0;
+      }
+
+      .assumptions-card,
+      .calculator-card,
+      .results-card,
+      .formula-card {
+        background: white;
+        border: 1px solid rgb(226, 232, 240);
+        border-radius: 12px;
+        padding: 2rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      }
+
+      .assumptions-card {
+        background: rgb(240, 249, 255);
+        border-color: rgb(186, 230, 253);
+      }
+
+      .assumptions-card h2 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+        color: rgb(15, 23, 42);
+      }
+
+      .assumptions-card p {
+        margin-bottom: 0.75rem;
+        font-weight: 500;
+      }
+
+      .assumptions-card ul {
+        margin: 0;
+        padding-left: 1.5rem;
+      }
+
+      .assumptions-card li {
+        margin-bottom: 0.5rem;
+        color: rgb(51, 65, 85);
+      }
+
+      .form-section {
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid rgb(226, 232, 240);
+      }
+
+      .form-section:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+
+      .form-section h2 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+        color: rgb(15, 23, 42);
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .form-group:last-child {
+        margin-bottom: 0;
+      }
+
+      label {
+        display: block;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        color: rgb(51, 65, 85);
+      }
+
+      input[type="number"] {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid rgb(203, 213, 225);
+        border-radius: 6px;
+        font-size: 1rem;
+        transition: border-color 0.2s;
+      }
+
+      input[type="number"]:focus {
+        outline: none;
+        border-color: rgb(13, 148, 136);
+        box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.1);
+      }
+
+      .radio-label {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+        margin-bottom: 0.75rem;
+      }
+
+      .radio-label input {
+        width: auto;
+        cursor: pointer;
+      }
+
+      .hint {
+        font-size: 0.875rem;
+        color: rgb(100, 116, 139);
+        margin-top: 0.5rem;
+        margin-bottom: 0;
+      }
+
+      .results-card h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        color: rgb(15, 23, 42);
+      }
+
+      .results-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .result-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        background: rgb(248, 250, 252);
+        border-radius: 8px;
+      }
+
+      .result-item.highlight {
+        background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+        color: white;
+      }
+
+      .result-item.highlight .result-label,
+      .result-item.highlight .result-value {
+        color: white;
+      }
+
+      .result-item.info {
+        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        color: white;
+      }
+
+      .result-item.info .result-label,
+      .result-item.info .result-value {
+        color: white;
+      }
+
+      .result-item.final-highlight {
+        background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+        color: white;
+        font-size: 1.1rem;
+      }
+
+      .result-item.final-highlight .result-label,
+      .result-item.final-highlight .result-value {
+        color: white;
+        font-weight: 700;
+      }
+
+      .final-results {
+        border: 2px solid rgb(13, 148, 136);
+      }
+
+      .result-label {
+        font-weight: 500;
+        color: rgb(71, 85, 105);
+        flex: 1;
+      }
+
+      .result-value {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: rgb(15, 23, 42);
+        text-align: right;
+      }
+
+      .formula-card h3 {
+        font-size: 1.125rem;
+        margin-bottom: 1rem;
+        color: rgb(15, 23, 42);
+      }
+
+      .formula {
+        background: rgb(248, 250, 252);
+        padding: 1.5rem;
+        border-radius: 8px;
+        border-left: 4px solid rgb(13, 148, 136);
+      }
+
+      .formula p {
+        margin-bottom: 0.75rem;
+        font-family: "Courier New", monospace;
+      }
+
+      .formula p:last-child {
+        margin-bottom: 0;
+      }
+
+      .formula-explanation {
+        font-family: inherit !important;
+        font-size: 0.9rem;
+        color: rgb(71, 85, 105);
+        margin-top: 1rem;
+        line-height: 1.6;
+      }
+
+      .disclaimer {
+        background: rgb(254, 252, 232);
+        border: 1px solid rgb(250, 230, 160);
+        border-radius: 8px;
+        padding: 1rem;
+        font-size: 0.875rem;
+        color: rgb(71, 85, 105);
+      }
+
+      .disclaimer p {
+        margin-bottom: 0.75rem;
+      }
+
+      .disclaimer p:last-child {
+        margin-bottom: 0;
+      }
+
+      .disclaimer a {
+        color: rgb(13, 148, 136);
+        font-weight: 500;
+      }
+
+      @media (max-width: 640px) {
+        .calculator-container {
+          padding: 2rem 1rem;
+        }
+
+        .header-section h1 {
+          font-size: 2rem;
+        }
+
+        .assumptions-card,
+        .calculator-card,
+        .results-card,
+        .formula-card {
+          padding: 1.5rem;
+        }
+
+        .result-value {
+          font-size: 1.125rem;
+        }
+
+        .result-label {
+          font-size: 0.9rem;
+        }
+      }
+    </style>
+  </body>
+</html>

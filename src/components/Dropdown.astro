@@ -1,0 +1,147 @@
+---
+interface DropdownItem {
+  label: string;
+  href: string;
+}
+
+interface Props {
+  label: string;
+  items: DropdownItem[];
+}
+
+const { label, items } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+
+<div class="dropdown">
+  <button class="dropdown-button" id="dropdown-button">
+    {label}
+    <svg
+      class="dropdown-arrow"
+      width="12"
+      height="12"
+      viewBox="0 0 12 12"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M2.5 4.5L6 8L9.5 4.5"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"></path>
+    </svg>
+  </button>
+  <div class="dropdown-menu" id="dropdown-menu">
+    {
+      items.map((item: DropdownItem) => (
+        <a href={`${base}${item.href}`} class="dropdown-item">
+          {item.label}
+        </a>
+      ))
+    }
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const button = document.getElementById("dropdown-button");
+    const menu = document.getElementById("dropdown-menu");
+
+    if (!button || !menu) return;
+
+    button.addEventListener("click", (e) => {
+      e.stopPropagation();
+      menu.classList.toggle("open");
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!menu.contains(e.target as Node) && e.target !== button) {
+        menu.classList.remove("open");
+      }
+    });
+  });
+</script>
+
+<style>
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-family: "Readex Pro", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.2s;
+  }
+
+  .dropdown-button:hover {
+    color: rgb(13, 148, 136);
+  }
+
+  .dropdown-arrow {
+    transition: transform 0.2s;
+  }
+
+  .dropdown.open .dropdown-arrow,
+  .dropdown-menu.open ~ .dropdown-button .dropdown-arrow {
+    transform: rotate(180deg);
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 0.5rem;
+    background: white;
+    border: 1px solid rgb(226, 232, 240);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-width: 160px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition:
+      opacity 0.2s,
+      transform 0.2s,
+      visibility 0.2s;
+    z-index: 100;
+  }
+
+  .dropdown-menu.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .dropdown-item {
+    display: block;
+    padding: 0.625rem 1rem;
+    color: rgb(15, 23, 42);
+    text-decoration: none;
+    font-size: 0.9375rem;
+    transition: background-color 0.2s;
+  }
+
+  .dropdown-item:first-child {
+    border-radius: 6px 6px 0 0;
+  }
+
+  .dropdown-item:last-child {
+    border-radius: 0 0 6px 6px;
+  }
+
+  .dropdown-item:hover {
+    background-color: rgb(243, 244, 246);
+    color: rgb(13, 148, 136);
+  }
+</style>

@@ -1,0 +1,551 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { SITE_TITLE } from "../../consts";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title="Segurança Social Calculator | Freelance Guide Portugal"
+      description="Calculate your monthly and annual Social Security contributions in Portugal based on your expected earnings."
+    />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <div class="calculator-container">
+        <div class="header-section">
+          <h1>Segurança Social Calculator</h1>
+          <p class="subtitle">
+            Calculate your monthly and annual Social Security contributions
+            based on your expected earnings.
+          </p>
+        </div>
+
+        <div class="calculator-card">
+          <!-- Section 1: Annual Income -->
+          <div class="form-section">
+            <h2>Annual Income</h2>
+            <div class="form-group">
+              <label for="annualIncome">Annual expected earnings (€) - Prestação de serviços (Service provision)</label>
+              <input
+                type="number"
+                id="annualIncome"
+                min="0"
+                step="100"
+                placeholder="e.g., 30000"
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="advancedBreakdown" />
+                <span>Use advanced income breakdown</span>
+              </label>
+            </div>
+
+            <div id="incomeBreakdown" class="income-breakdown hidden">
+              <p class="breakdown-hint">
+                Split your annual income by type (must total your annual
+                income):
+              </p>
+              <div class="form-group">
+                <label for="services">Prestação de serviços (Service provision) (70% factor)</label>
+                <input
+                  type="number"
+                  id="services"
+                  min="0"
+                  step="100"
+                  placeholder="0"
+                />
+              </div>
+              <div class="form-group">
+                <label for="hotelaria">Atividades hoteleiras (Hotel activities) (20% factor)</label
+                >
+                <input
+                  type="number"
+                  id="hotelaria"
+                  min="0"
+                  step="100"
+                  placeholder="0"
+                />
+              </div>
+              <div class="form-group">
+                <label for="vendas">Vendas (Sales) (20% factor)</label>
+                <input
+                  type="number"
+                  id="vendas"
+                  min="0"
+                  step="100"
+                  placeholder="0"
+                />
+              </div>
+              <div class="form-group">
+                <label for="subsidios"
+                  >Subsídios à exploração (Operating subsidies) (20% factor)</label
+                >
+                <input
+                  type="number"
+                  id="subsidios"
+                  min="0"
+                  step="100"
+                  placeholder="0"
+                />
+              </div>
+              <div class="form-group">
+                <label for="energia"
+                  >Produção de energia / AL / arrendamento (Energy production / Short-term rental / Leasing) (0% factor)</label
+                >
+                <input
+                  type="number"
+                  id="energia"
+                  min="0"
+                  step="100"
+                  placeholder="0"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 2: Variation Adjustment -->
+          <div class="form-section">
+            <h2>Variação (Variation Adjustment)</h2>
+            <div class="form-group">
+              <label for="variation">Income variation</label>
+              <select id="variation">
+                <option value="-0.25">-25%</option>
+                <option value="-0.20">-20%</option>
+                <option value="-0.15">-15%</option>
+                <option value="-0.10">-10%</option>
+                <option value="-0.05">-5%</option>
+                <option value="0" selected>0%</option>
+                <option value="0.05">+5%</option>
+                <option value="0.10">+10%</option>
+                <option value="0.15">+15%</option>
+                <option value="0.20">+20%</option>
+                <option value="0.25">+25%</option>
+              </select>
+              <p class="hint">
+                Adjust your expected income up or down based on anticipated
+                changes.
+              </p>
+            </div>
+          </div>
+
+          <!-- Section 3: Contributor Type -->
+          <div class="form-section">
+            <h2>Contributor Type</h2>
+            <div class="form-group">
+              <label class="radio-label">
+                <input
+                  type="radio"
+                  name="contributorType"
+                  value="0.214"
+                  checked
+                />
+                <span>Trabalhador Independente (Independent worker) (21.4%)</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="contributorType" value="0.252" />
+                <span>Empresário em Nome Individual (Sole proprietor) (25.2%)</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 4: Results -->
+        <div class="results-card" id="results">
+          <h2>Estimated Contributions</h2>
+          <div class="results-grid">
+            <div class="result-item">
+              <span class="result-label">Rendimento relevante (Relevant income, RR)</span>
+              <span class="result-value" id="relevantIncome">€ 0.00</span>
+            </div>
+            <div class="result-item">
+              <span class="result-label">Rendimento relevante ajustado (Adjusted relevant income)</span>
+              <span class="result-value" id="adjustedIncome">€ 0.00</span>
+            </div>
+            <div class="result-item">
+              <span class="result-label">Base mensal (Monthly base, BIC)</span>
+              <span class="result-value" id="monthlyBase">€ 0.00</span>
+            </div>
+            <div class="result-item info">
+              <span class="result-label">Teto máximo (Maximum ceiling - 12 × IAS)</span>
+              <span class="result-value" id="maxCeiling">€ 0.00</span>
+            </div>
+            <div class="result-item highlight">
+              <span class="result-label">Contribuição mensal (Monthly contribution)</span>
+              <span class="result-value" id="monthlyContribution">€ 0.00</span>
+            </div>
+            <div class="result-item highlight">
+              <span class="result-label">Contribuição anual (Annual contribution)</span>
+              <span class="result-value" id="annualContribution">€ 0.00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="disclaimer">
+          <p>
+            <strong>Note:</strong> This calculator applies the contribution ceiling
+            of 12 × IAS (Indexante dos Apoios Sociais). For 2025, IAS = €522.50,
+            so the maximum monthly base is €6,270.00. Actual contributions may vary.
+            For official information, consult
+            <a
+              href="https://www.seg-social.pt"
+              target="_blank"
+              rel="noopener noreferrer">Segurança Social Directa</a
+            >.
+          </p>
+        </div>
+      </div>
+    </main>
+    <Footer />
+
+    <script>
+      function formatCurrency(value: number): string {
+        return new Intl.NumberFormat("pt-PT", {
+          style: "currency",
+          currency: "EUR",
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        }).format(value);
+      }
+
+      function calculate() {
+        const IAS = 522.5; // IAS value for 2025
+        const annualIncome =
+          parseFloat(
+            (document.getElementById("annualIncome") as HTMLInputElement)
+              ?.value,
+          ) || 0;
+        const useAdvanced = (
+          document.getElementById("advancedBreakdown") as HTMLInputElement
+        )?.checked;
+        const variation =
+          parseFloat(
+            (document.getElementById("variation") as HTMLSelectElement)?.value,
+          ) || 0;
+        const rate =
+          parseFloat(
+            (
+              document.querySelector(
+                'input[name="contributorType"]:checked',
+              ) as HTMLInputElement
+            )?.value,
+          ) || 0.214;
+
+        let relevantIncome = 0;
+
+        if (useAdvanced) {
+          const services =
+            parseFloat(
+              (document.getElementById("services") as HTMLInputElement)?.value,
+            ) || 0;
+          const hotelaria =
+            parseFloat(
+              (document.getElementById("hotelaria") as HTMLInputElement)?.value,
+            ) || 0;
+          const vendas =
+            parseFloat(
+              (document.getElementById("vendas") as HTMLInputElement)?.value,
+            ) || 0;
+          const subsidios =
+            parseFloat(
+              (document.getElementById("subsidios") as HTMLInputElement)?.value,
+            ) || 0;
+          const energia =
+            parseFloat(
+              (document.getElementById("energia") as HTMLInputElement)?.value,
+            ) || 0;
+
+          relevantIncome =
+            services * 0.7 +
+            hotelaria * 0.2 +
+            vendas * 0.2 +
+            subsidios * 0.2 +
+            energia * 0;
+        } else {
+          relevantIncome = annualIncome * 0.7;
+        }
+
+        const adjustedIncome = relevantIncome * (1 + variation);
+        const monthlyBase = adjustedIncome / 12;
+        
+        // Calculate ceiling: 12 * IAS (monthly maximum base)
+        const maxMonthlyBase = 12 * IAS;
+        const cappedMonthlyBase = Math.min(monthlyBase, maxMonthlyBase);
+        
+        const monthlyContribution = cappedMonthlyBase * rate;
+        const annualContribution = monthlyContribution * 12;
+        const maxCeiling = maxMonthlyBase * rate;
+
+        (document.getElementById("relevantIncome") as HTMLElement).textContent =
+          formatCurrency(relevantIncome);
+        (document.getElementById("adjustedIncome") as HTMLElement).textContent =
+          formatCurrency(adjustedIncome);
+        (document.getElementById("monthlyBase") as HTMLElement).textContent =
+          formatCurrency(monthlyBase);
+        (document.getElementById("maxCeiling") as HTMLElement).textContent =
+          formatCurrency(maxCeiling);
+        (
+          document.getElementById("monthlyContribution") as HTMLElement
+        ).textContent = formatCurrency(monthlyContribution);
+        (
+          document.getElementById("annualContribution") as HTMLElement
+        ).textContent = formatCurrency(annualContribution);
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const advancedCheckbox = document.getElementById(
+          "advancedBreakdown",
+        ) as HTMLInputElement;
+        const breakdownSection = document.getElementById("incomeBreakdown");
+
+        advancedCheckbox?.addEventListener("change", () => {
+          if (advancedCheckbox.checked) {
+            breakdownSection?.classList.remove("hidden");
+          } else {
+            breakdownSection?.classList.add("hidden");
+          }
+          calculate();
+        });
+
+        document
+          .getElementById("annualIncome")
+          ?.addEventListener("input", calculate);
+        document
+          .getElementById("services")
+          ?.addEventListener("input", calculate);
+        document
+          .getElementById("hotelaria")
+          ?.addEventListener("input", calculate);
+        document.getElementById("vendas")?.addEventListener("input", calculate);
+        document
+          .getElementById("subsidios")
+          ?.addEventListener("input", calculate);
+        document
+          .getElementById("energia")
+          ?.addEventListener("input", calculate);
+        document
+          .getElementById("variation")
+          ?.addEventListener("change", calculate);
+        document
+          .querySelectorAll('input[name="contributorType"]')
+          .forEach((radio) => {
+            radio.addEventListener("change", calculate);
+          });
+
+        calculate();
+      });
+    </script>
+
+    <style>
+      main {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+      }
+
+      .calculator-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 3rem 1.5rem;
+      }
+
+      .header-section {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .header-section h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: rgb(15, 23, 42);
+      }
+
+      .subtitle {
+        font-size: 1.125rem;
+        color: rgb(100, 116, 139);
+        margin: 0;
+      }
+
+      .calculator-card,
+      .results-card {
+        background: white;
+        border: 1px solid rgb(226, 232, 240);
+        border-radius: 12px;
+        padding: 2rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      }
+
+      .form-section {
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid rgb(226, 232, 240);
+      }
+
+      .form-section:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+
+      .form-section h2 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+        color: rgb(15, 23, 42);
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .form-group:last-child {
+        margin-bottom: 0;
+      }
+
+      label {
+        display: block;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        color: rgb(51, 65, 85);
+      }
+
+      input[type="number"],
+      select {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid rgb(203, 213, 225);
+        border-radius: 6px;
+        font-size: 1rem;
+        transition: border-color 0.2s;
+      }
+
+      input[type="number"]:focus,
+      select:focus {
+        outline: none;
+        border-color: rgb(13, 148, 136);
+        box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.1);
+      }
+
+      .checkbox-label,
+      .radio-label {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+        margin-bottom: 0.75rem;
+      }
+
+      .checkbox-label input,
+      .radio-label input {
+        width: auto;
+        cursor: pointer;
+      }
+
+      .hint {
+        font-size: 0.875rem;
+        color: rgb(100, 116, 139);
+        margin-top: 0.5rem;
+        margin-bottom: 0;
+      }
+
+      .income-breakdown {
+        margin-top: 1.5rem;
+        padding: 1.5rem;
+        background: rgb(248, 250, 252);
+        border-radius: 8px;
+        transition: all 0.3s;
+      }
+
+      .income-breakdown.hidden {
+        display: none;
+      }
+
+      .breakdown-hint {
+        font-size: 0.9rem;
+        color: rgb(71, 85, 105);
+        margin-bottom: 1rem;
+      }
+
+      .results-card h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        color: rgb(15, 23, 42);
+      }
+
+      .results-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .result-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        background: rgb(248, 250, 252);
+        border-radius: 8px;
+      }
+
+      .result-item.highlight {
+        background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+        color: white;
+      }
+
+      .result-item.highlight .result-label,
+      .result-item.highlight .result-value {
+        color: white;
+      }
+
+      .result-label {
+        font-weight: 500;
+        color: rgb(71, 85, 105);
+      }
+
+      .result-value {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: rgb(15, 23, 42);
+      }
+
+      .disclaimer {
+        background: rgb(254, 252, 232);
+        border: 1px solid rgb(250, 230, 160);
+        border-radius: 8px;
+        padding: 1rem;
+        font-size: 0.875rem;
+        color: rgb(71, 85, 105);
+      }
+
+      .disclaimer a {
+        color: rgb(13, 148, 136);
+        font-weight: 500;
+      }
+
+      @media (max-width: 640px) {
+        .calculator-container {
+          padding: 2rem 1rem;
+        }
+
+        .header-section h1 {
+          font-size: 2rem;
+        }
+
+        .calculator-card,
+        .results-card {
+          padding: 1.5rem;
+        }
+
+        .result-value {
+          font-size: 1.125rem;
+        }
+      }
+    </style>
+  </body>
+</html>
