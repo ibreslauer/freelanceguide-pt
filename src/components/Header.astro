@@ -1,86 +1,81 @@
 ---
-import { SITE_TITLE } from '../consts';
-import HeaderLink from './HeaderLink.astro';
+import { SITE_TITLE } from "../consts";
+import HeaderLink from "./HeaderLink.astro";
+import Logo from "./Logo.astro";
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <header>
-	<nav>
-		<div class="logo">
-			<a href="./">
-				<svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-				</svg>
-				<span class="logo-text">{SITE_TITLE}</span>
-			</a>
-		</div>
-		<div class="internal-links">
-			<HeaderLink href="blog">Guides</HeaderLink>
-			<HeaderLink href="about">About</HeaderLink>
-		</div>
-	</nav>
+  <nav>
+    <div class="logo">
+      <a href={base}>
+        <Logo class="logo-icon" size={32} />
+        <span class="logo-text">{SITE_TITLE}</span>
+      </a>
+    </div>
+    <div class="internal-links">
+      <HeaderLink href={`${base}blog`}>Guides</HeaderLink>
+      <HeaderLink href={`${base}about`}>About</HeaderLink>
+    </div>
+  </nav>
 </header>
 <style>
-	header {
-		margin: 0;
-		padding: 0;
-		background: white;
-		border-bottom: 1px solid rgb(226, 232, 240);
-		position: sticky;
-		top: 0;
-		z-index: 50;
-		backdrop-filter: blur(8px);
-		background-color: rgba(255, 255, 255, 0.95);
-	}
+  header {
+    margin: 0;
+    padding: 0;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.95);
+  }
 
-	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		max-width: 1280px;
-		margin: 0 auto;
-		padding: 1rem 1.5rem;
-	}
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+  }
 
-	.logo a {
-		display: flex;
-		align-items: center;
-		gap: 0.625rem;
-		text-decoration: none;
-		color: rgb(15, 23, 42);
-		font-weight: 700;
-		font-size: 1.125rem;
-		transition: color 0.2s;
-	}
+  .logo a {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    text-decoration: none;
+    color: rgb(15, 23, 42);
+    font-family: "Readex Pro", sans-serif;
+    font-weight: 500;
+    font-size: 1.125rem;
+    transition: color 0.2s;
+  }
 
-	.logo a:hover {
-		color: rgb(13, 148, 136);
-	}
+  .logo a:hover {
+    color: rgb(13, 148, 136);
+  }
 
-	.logo-icon {
-		width: 1.75rem;
-		height: 1.75rem;
-		color: rgb(13, 148, 136);
-	}
+  .logo-text {
+    font-size: 1.125rem;
+  }
 
-	.logo-text {
-		font-size: 1.125rem;
-	}
+  .internal-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
 
-	.internal-links {
-		display: flex;
-		gap: 2rem;
-		align-items: center;
-	}
-
-	@media (max-width: 640px) {
-		.logo-text {
-			display: none;
-		}
-		nav {
-			padding: 0.875rem 1rem;
-		}
-		.internal-links {
-			gap: 1rem;
-		}
-	}
+  @media (max-width: 640px) {
+    .logo-text {
+      display: none;
+    }
+    nav {
+      padding: 0.875rem 1rem;
+    }
+    .internal-links {
+      gap: 1rem;
+    }
+  }
 </style>
