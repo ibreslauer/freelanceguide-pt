@@ -1,8 +1,8 @@
 ---
-title: 'Understanding Fatura vs Fatura-Recibo in Portugal'
-description: 'Learn the essential difference between Fatura and Fatura-Recibo for Portuguese freelancers. Understand which document to use for your Recibos Verdes invoicing to stay compliant with Autoridade Tributária.'
+title: "Understanding Fatura vs Fatura-Recibo in Portugal"
+description: "Learn the essential difference between Fatura and Fatura-Recibo for Portuguese freelancers. Understand which document to use for your Recibos Verdes invoicing to stay compliant with Autoridade Tributária."
 pubDate: 2025-11-22
-heroImage: '../../assets/blog-placeholder-1.jpg'
+heroImage: "../../assets/blog-1-fatura-recibo-two-buttons.jpg"
 ---
 
 If you work as a freelancer in Portugal under **Recibos Verdes (Green Receipts)**, understanding the difference between **Fatura** and **Fatura-Recibo** is crucial for proper invoicing and tax compliance. These two document types serve different purposes, and using the wrong one can lead to confusion or issues with the Portuguese Tax Authority (**Autoridade Tributária e Aduaneira**).
@@ -18,6 +18,7 @@ A **Fatura (Invoice)** is a document issued to request payment for goods or serv
 ### When to Use a Fatura
 
 You should issue a Fatura when:
+
 - Your client will pay you at a later date (not immediately)
 - You have payment terms like "payment due within 30 days"
 - You need to formally document a transaction before receiving payment
@@ -30,6 +31,7 @@ You should issue a Fatura when:
 A **Fatura-Recibo (Invoice-Receipt)** is a hybrid document that combines both the invoice and the receipt into one. This is the most commonly used document type for self-employed workers under Recibos Verdes.
 
 Key characteristics:
+
 - **Both invoices AND confirms payment** – It documents the transaction and confirms that payment has been received
 - **All-in-one document** – No need for separate invoice and receipt
 - **Immediate or near-immediate payment** – Used when the client pays right away or very shortly after service delivery
@@ -37,6 +39,7 @@ Key characteristics:
 ### When to Use a Fatura-Recibo
 
 You should issue a Fatura-Recibo when:
+
 - Your client pays you immediately or within a few days
 - You work on a pay-as-you-go basis
 - You want to streamline your invoicing process
@@ -46,50 +49,62 @@ You should issue a Fatura-Recibo when:
 
 ## Key Differences: Fatura vs Fatura-Recibo
 
-| Feature | Fatura | Fatura-Recibo |
-|---------|---------|---------------|
-| **Purpose** | Request payment | Request payment AND confirm receipt |
-| **Payment Status** | Payment may be pending | Payment has been received |
-| **When to Use** | Deferred payment terms | Immediate or prompt payment |
-| **Follow-up Required** | Requires issuing a Recibo after payment | No follow-up needed |
-| **Common For** | Corporate clients, long payment terms | Freelancers, small businesses, prompt payers |
+| Feature                | Fatura                                  | Fatura-Recibo                                |
+| ---------------------- | --------------------------------------- | -------------------------------------------- |
+| **Purpose**            | Request payment                         | Request payment AND confirm receipt          |
+| **Payment Status**     | Payment may be pending                  | Payment has been received                    |
+| **When to Use**        | Deferred payment terms                  | Immediate or prompt payment                  |
+| **Follow-up Required** | Requires issuing a Recibo after payment | No follow-up needed                          |
+| **Common For**         | Corporate clients, long payment terms   | Freelancers, small businesses, prompt payers |
 
 ## Why This Matters for Freelancers
 
 As a freelancer under Recibos Verdes, using the correct document type is important for several reasons:
 
 ### 1. Tax Compliance
+
 The Portuguese Tax Authority (Autoridade Tributária e Aduaneira) tracks your income through these documents. Using the appropriate document type ensures:
+
 - Accurate reporting of when payment was received
 - Proper VAT handling (if applicable)
 - Clear audit trail for your freelance income
 
 ### 2. Simpler Accounting
+
 Most freelancers benefit from using **Fatura-Recibo** because:
+
 - It's a single document instead of two
 - Less administrative overhead
 - Clearer record of when you actually got paid
 
 ### 3. Client Expectations
+
 Different clients may have preferences:
+
 - **Large corporations** often require separate Faturas due to their internal accounting processes
 - **Small businesses and individuals** typically prefer the simplicity of Fatura-Recibo
 
 ## Practical Tips for Portuguese Freelancers
 
 ### Use Fatura-Recibo as Your Default
+
 For most freelance work in Portugal, **Fatura-Recibo is the right choice**. It's simpler, covers both invoicing and payment confirmation, and aligns with how most freelancers operate.
 
 ### Switch to Fatura for Extended Payment Terms
+
 If you're working with clients who have formal payment terms (Net 30, Net 60), use a regular Fatura and then issue a Recibo once you receive payment.
 
 ### Use Invoicing Software
+
 Don't try to manage this manually. Use one of these options:
+
 - **Portal das Finanças** – The official tax authority portal allows you to generate both Faturas and Faturas-Recibo
 - **Third-party tools** – Software like InvoiceXpress, Moloni, or Conta Online can automate this process
 
 ### Keep Good Records
+
 Regardless of which document type you use:
+
 - Issue documents promptly
 - Keep digital and/or physical copies
 - Track payment dates carefully
@@ -106,11 +121,13 @@ Regardless of which document type you use:
 ## Recibo: The Third Document Type
 
 For completeness, it's worth mentioning **Recibo (Receipt)**:
+
 - Used to confirm payment for a previously issued Fatura
 - Does NOT include service details (those are already on the Fatura)
 - Simply states: "Payment received for Fatura #XYZ"
 
 **Workflow example**:
+
 1. November 1: Issue **Fatura** #2024-001 for €1,000 (Net 30 terms)
 2. December 1: Receive payment of €1,000
 3. December 1: Issue **Recibo** #2024-001 referencing Fatura #2024-001
@@ -120,6 +137,7 @@ For completeness, it's worth mentioning **Recibo (Receipt)**:
 Not sure which to use? Ask yourself:
 
 **Has the client already paid or will they pay within a few days?**
+
 - ✅ Yes → Use **Fatura-Recibo**
 - ❌ No → Use **Fatura** (and issue a **Recibo** later when paid)
 
@@ -138,4 +156,4 @@ By using the correct document type, you'll maintain proper compliance with Portu
 
 ---
 
-*Have questions about invoicing as a Portuguese freelancer? Check out our other guides on [Recibos Verdes](/blog/) and staying compliant with Finanças.*
+_Have questions about invoicing as a Portuguese freelancer? Check out our other guides on [Recibos Verdes](/blog/) and staying compliant with Finanças._
