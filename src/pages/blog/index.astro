@@ -6,6 +6,7 @@ import Footer from '../../components/Footer.astro';
 import Header from '../../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 
+const base = import.meta.env.BASE_URL;
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
@@ -231,7 +232,7 @@ const [featuredPost, ...otherPosts] = posts;
 					<!-- Featured Post -->
 					{featuredPost && (
 						<div class="bento-item featured">
-							<a href={`${featuredPost.id}/`}>
+							<a href={`${base}blog/${featuredPost.id}/`}>
 								{featuredPost.data.heroImage && (
 									<Image 
 										width={1200} 
@@ -262,7 +263,7 @@ const [featuredPost, ...otherPosts] = posts;
 				<ul class="posts-grid">
 					{otherPosts.map((post) => (
 						<li class="bento-item">
-							<a href={`${post.id}/`}>
+							<a href={`${base}blog/${post.id}/`}>
 								{post.data.heroImage && (
 									<Image 
 										width={600} 
