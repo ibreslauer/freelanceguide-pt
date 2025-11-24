@@ -50,13 +50,13 @@ The number of installments you choose affects the requirements:
 
 ##### **Up to 12 Installments**
 
-- ✅ No additional requirements
+- No additional requirements
 - The system immediately shows the monthly breakdown
 - Most straightforward option for most freelancers
 
 ##### **More Than 12 Installments**
 
-- ⚠️ Requires a **Garantia** (Guarantee)
+- Requires a **Garantia** (Guarantee)
 - You must select a guarantee type such as:
   - **Bank guarantee** (Garantia bancária)
   - **Mortgage** (Hipoteca)
@@ -127,9 +127,9 @@ Spreading your IRS payment over several months helps you:
 
 Setting up an official payment plan means:
 
-- ✅ You remain in good standing with the Tax Authority
-- ✅ You avoid additional collection actions
-- ✅ You demonstrate responsible tax management
+- You remain in good standing with the Tax Authority
+- You avoid additional collection actions
+- You demonstrate responsible tax management
 
 #### Interest vs. Penalties
 
@@ -217,10 +217,10 @@ Setting up an IRS payment plan through the Portal das Finanças is a straightfor
 
 **Key takeaways**:
 
-- ✅ Submit your request within 15 days after the payment deadline
-- ✅ Choose 12 or fewer installments to avoid needing a guarantee
-- ✅ Never miss an installment payment—it can cancel your entire plan
-- ✅ Use "Pagamentos a Decorrer" to track your obligations
+- Submit your request within 15 days after the payment deadline
+- Choose 12 or fewer installments to avoid needing a guarantee
+- Never miss an installment payment—it can cancel your entire plan
+- Use "Pagamentos a Decorrer" to track your obligations
 
 Remember: it's always better to set up a payment plan proactively rather than falling behind on your tax obligations. The Portuguese Tax Authority provides these tools to help taxpayers stay compliant—take advantage of them!
 

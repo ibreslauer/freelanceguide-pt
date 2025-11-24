@@ -10,7 +10,6 @@ interface Props {
 }
 
 const { label, items } = Astro.props;
-const base = import.meta.env.BASE_URL;
 ---
 
 <div class="dropdown">
@@ -35,7 +34,7 @@ const base = import.meta.env.BASE_URL;
   <div class="dropdown-menu" id="dropdown-menu">
     {
       items.map((item: DropdownItem) => (
-        <a href={`${base}${item.href}`} class="dropdown-item">
+        <a href={item.href} class="dropdown-item">
           {item.label}
         </a>
       ))

@@ -112,11 +112,11 @@ Regardless of which document type you use:
 
 ## Common Mistakes to Avoid
 
-❌ **Issuing a Fatura-Recibo before receiving payment** – This document confirms payment has been made, so only issue it after you've been paid
+**Issuing a Fatura-Recibo before receiving payment** – This document confirms payment has been made, so only issue it after you've been paid
 
-❌ **Forgetting to issue a Recibo after a Fatura** – If you issue a Fatura and later receive payment, you must follow up with a Recibo to confirm the payment
+**Forgetting to issue a Recibo after a Fatura** – If you issue a Fatura and later receive payment, you must follow up with a Recibo to confirm the payment
 
-❌ **Mixing up document types** – Be consistent with your approach and understand when each type applies
+**Mixing up document types** – Be consistent with your approach and understand when each type applies
 
 ## Recibo: The Third Document Type
 
@@ -138,8 +138,8 @@ Not sure which to use? Ask yourself:
 
 **Has the client already paid or will they pay within a few days?**
 
-- ✅ Yes → Use **Fatura-Recibo**
-- ❌ No → Use **Fatura** (and issue a **Recibo** later when paid)
+- Yes → Use **Fatura-Recibo**
+- No → Use **Fatura** (and issue a **Recibo** later when paid)
 
 ## Resources
 

@@ -154,25 +154,25 @@ When you hire as an ENI, you register as an employer with Social Security and pa
 
 ### For Trabalhador Independente
 
-✅ **Advantages**:
+**Advantages**:
 - Simpler registration process
 - Lower administrative burden
 - No inventory management
 - No need for commercial registry
 
-⚠️ **Limitations**:
+**Limitations**:
 - Cannot obtain a commercial business name certificate if your activity is exclusively a "liberal profession" (Article 151 CIRS)
 - Less suitable for scaling with employees
 
 ### For Empresário em Nome Individual
 
-✅ **Advantages**:
+**Advantages**:
 - Can operate under a commercial business name
 - Better suited for commercial activities and scaling
 - Lower tax coefficients on goods sold (0.15 vs 0.75)
 - Designed for hiring employees
 
-⚠️ **Limitations**:
+**Limitations**:
 - Higher administrative burden
 - Must manage inventory and communicate stock levels
 - More complex accounting requirements
@@ -182,21 +182,21 @@ When you hire as an ENI, you register as an employer with Social Security and pa
 
 ### Choose Trabalhador Independente If:
 
-- ✅ You provide professional services (consulting, design, programming, writing)
-- ✅ You work primarily solo or with occasional subcontractors
-- ✅ You don't sell physical goods
-- ✅ You want minimal administrative overhead
-- ✅ Your income comes from your skills and time
+- You provide professional services (consulting, design, programming, writing)
+- You work primarily solo or with occasional subcontractors
+- You don't sell physical goods
+- You want minimal administrative overhead
+- Your income comes from your skills and time
 
 **Perfect for**: Freelance consultants, developers, designers, writers, coaches, most digital professionals
 
 ### Choose Empresário em Nome Individual If:
 
-- ✅ You buy and sell physical goods
-- ✅ You manufacture or transform products
-- ✅ You operate a commercial establishment (shop, restaurant, café)
-- ✅ You plan to hire employees
-- ✅ You want a commercial business name beyond your personal name
+- You buy and sell physical goods
+- You manufacture or transform products
+- You operate a commercial establishment (shop, restaurant, café)
+- You plan to hire employees
+- You want a commercial business name beyond your personal name
 
 **Perfect for**: E-commerce sellers, retail shop owners, restaurant operators, manufacturers, wholesalers
 
@@ -245,19 +245,19 @@ Use the Portal das Finanças or certified invoicing software to issue:
 
 ## Common Misconceptions
 
-### ❌ "TI and ENI are different legal entities"
+### "TI and ENI are different legal entities"
 
 **Reality**: Both are natural persons. The distinction is administrative and fiscal, not juridical.
 
-### ❌ "Only ENI can hire employees"
+### "Only ENI can hire employees"
 
 **Reality**: TI can technically hire, but it's strategically less common and less suitable.
 
-### ❌ "ENI always pays less tax"
+### "ENI always pays less tax"
 
 **Reality**: It depends on your activity. Services are taxed similarly, but goods benefit from lower coefficients (0.15 vs 0.75).
 
-### ❌ "I need to choose one or the other permanently"
+### "I need to choose one or the other permanently"
 
 **Reality**: You can switch, add activities, or operate as both simultaneously as your business evolves.
 
@@ -295,11 +295,11 @@ The choice between **Trabalhador Independente** and **Empresário em Nome Indivi
 
 **Key takeaways**:
 
-- ✅ TI = Services based on professional skills and expertise
-- ✅ ENI = Commercial activities involving goods or industrial operations  
-- ✅ Both are natural persons with unlimited liability
-- ✅ The distinction affects tax calculations, administrative burden, and registration requirements
-- ✅ You can operate as both if your activities span services and commerce
+- TI = Services based on professional skills and expertise
+- ENI = Commercial activities involving goods or industrial operations  
+- Both are natural persons with unlimited liability
+- The distinction affects tax calculations, administrative burden, and registration requirements
+- You can operate as both if your activities span services and commerce
 
 Most digital freelancers and consultants will be Trabalhadores Independentes. If you're selling products or running a commercial establishment, you'll be an Empresário em Nome Individual.
 
