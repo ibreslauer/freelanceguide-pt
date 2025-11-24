@@ -1,0 +1,625 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title="Tax Calendar | Freelance Guide Portugal"
+      description="Important tax deadlines and dates for Portuguese freelancers (Trabalhadores Independentes). Stay compliant with quarterly VAT, Social Security, and IRS obligations."
+    />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <div class="calendar-container">
+        <div class="header-section">
+          <h1>Tax Calendar for Portuguese Freelancers</h1>
+          <p class="subtitle">
+            Key deadlines and dates to keep your freelance business compliant with Finanças and Segurança Social.
+          </p>
+        </div>
+
+        <!-- Monthly Obligations -->
+        <div class="calendar-section">
+          <div class="section-header">
+            <div class="icon-wrapper monthly">
+              <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <h2>Monthly Obligations</h2>
+          </div>
+          
+          <div class="deadline-card">
+            <div class="deadline-header">
+              <h3>Segurança Social Contributions</h3>
+              <span class="deadline-badge monthly">Monthly</span>
+            </div>
+            <div class="deadline-details">
+              <div class="detail-row">
+                <span class="detail-label">Deadline:</span>
+                <span class="detail-value">20th of the following month</span>
+              </div>
+              <p class="deadline-description">
+                Pay your monthly Social Security contribution (Contribuições para a Segurança Social). The contribution for each month is due by the 20th of the following month.
+              </p>
+              <div class="deadline-example">
+                <strong>Example:</strong> January contribution due by February 20th
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quarterly Obligations -->
+        <div class="calendar-section">
+          <div class="section-header">
+            <div class="icon-wrapper quarterly">
+              <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+              </svg>
+            </div>
+            <h2>Quarterly Obligations</h2>
+          </div>
+          
+          <div class="deadline-card">
+            <div class="deadline-header">
+              <h3>IVA (VAT) Periodic Declaration</h3>
+              <span class="deadline-badge quarterly">Quarterly</span>
+            </div>
+            <div class="deadline-details">
+              <div class="detail-row">
+                <span class="detail-label">Deadline:</span>
+                <span class="detail-value">By the 20th of the 2nd month after quarter end</span>
+              </div>
+              <p class="deadline-description">
+                Submit your quarterly VAT return through Portal das Finanças. This includes all invoices issued and received during the quarter.
+              </p>
+              <div class="deadline-timeline">
+                <div class="timeline-item">
+                  <span class="timeline-quarter">Q1 (Jan-Mar)</span>
+                  <span class="timeline-arrow">→</span>
+                  <span class="timeline-deadline">Due: May 20</span>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-quarter">Q2 (Apr-Jun)</span>
+                  <span class="timeline-arrow">→</span>
+                  <span class="timeline-deadline">Due: August 20</span>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-quarter">Q3 (Jul-Sep)</span>
+                  <span class="timeline-arrow">→</span>
+                  <span class="timeline-deadline">Due: November 20</span>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-quarter">Q4 (Oct-Dec)</span>
+                  <span class="timeline-arrow">→</span>
+                  <span class="timeline-deadline">Due: February 20</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="deadline-card">
+            <div class="deadline-header">
+              <h3>Segurança Social Income Declaration</h3>
+              <span class="deadline-badge quarterly">Quarterly</span>
+            </div>
+            <div class="deadline-details">
+              <div class="detail-row">
+                <span class="detail-label">Deadline:</span>
+                <span class="detail-value">15th of the month following quarter end</span>
+              </div>
+              <p class="deadline-description">
+                Declare your quarterly income (Declaração Trimestral de Rendimentos) to Segurança Social Direta. This helps determine your contribution base for the following year.
+              </p>
+              <div class="deadline-timeline">
+                <div class="timeline-item">
+                  <span class="timeline-quarter">Q1 (Jan-Mar)</span>
+                  <span class="timeline-arrow">→</span>
+                  <span class="timeline-deadline">Due: April 15</span>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-quarter">Q2 (Apr-Jun)</span>
+                  <span class="timeline-arrow">→</span>
+                  <span class="timeline-deadline">Due: July 15</span>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-quarter">Q3 (Jul-Sep)</span>
+                  <span class="timeline-arrow">→</span>
+                  <span class="timeline-deadline">Due: October 15</span>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-quarter">Q4 (Oct-Dec)</span>
+                  <span class="timeline-arrow">→</span>
+                  <span class="timeline-deadline">Due: January 15</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Annual Obligations -->
+        <div class="calendar-section">
+          <div class="section-header">
+            <div class="icon-wrapper annual">
+              <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h2>Annual Obligations</h2>
+          </div>
+          
+          <div class="deadline-card">
+            <div class="deadline-header">
+              <h3>IRS (Income Tax) Annual Return</h3>
+              <span class="deadline-badge annual">Annual</span>
+            </div>
+            <div class="deadline-details">
+              <div class="detail-row">
+                <span class="detail-label">Deadline:</span>
+                <span class="detail-value">April 1 - June 30</span>
+              </div>
+              <p class="deadline-description">
+                Submit your annual income tax return (Declaração de IRS) through Portal das Finanças. This covers all income earned in the previous calendar year.
+              </p>
+              <div class="deadline-example">
+                <strong>Example:</strong> Income earned in 2025 must be declared between April 1 - June 30, 2026
+              </div>
+            </div>
+          </div>
+
+          <div class="deadline-card">
+            <div class="deadline-header">
+              <h3>Annual Invoice Summary (Resumo Anual)</h3>
+              <span class="deadline-badge annual">Annual</span>
+            </div>
+            <div class="deadline-details">
+              <div class="detail-row">
+                <span class="detail-label">Deadline:</span>
+                <span class="detail-value">February 15</span>
+              </div>
+              <p class="deadline-description">
+                Verify or correct the annual summary of invoices issued (Anexo SS) on Portal das Finanças. This should match your quarterly VAT declarations.
+              </p>
+              <div class="deadline-example">
+                <strong>Example:</strong> Summary for 2025 invoices due by February 15, 2026
+              </div>
+            </div>
+          </div>
+
+          <div class="deadline-card">
+            <div class="deadline-header">
+              <h3>Modelo 3 IRS Declaration</h3>
+              <span class="deadline-badge annual">Annual</span>
+            </div>
+            <div class="deadline-details">
+              <div class="detail-row">
+                <span class="detail-label">Deadline:</span>
+                <span class="detail-value">April 1 - June 30</span>
+              </div>
+              <p class="deadline-description">
+                The main annual declaration for self-employed individuals. Include all business income, expenses (if in simplified regime), and other relevant tax information.
+              </p>
+            </div>
+          </div>
+
+          <div class="deadline-card">
+            <div class="deadline-header">
+              <h3>Declaração de Rendimentos (Segurança Social)</h3>
+              <span class="deadline-badge annual">Annual</span>
+            </div>
+            <div class="deadline-details">
+              <div class="detail-row">
+                <span class="detail-label">Deadline:</span>
+                <span class="detail-value">January 15</span>
+              </div>
+              <p class="deadline-description">
+                Annual income declaration to Segurança Social for the previous year. This determines your contribution base for the current year.
+              </p>
+              <div class="deadline-example">
+                <strong>Example:</strong> Declaration for 2025 income due by January 15, 2026
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Important Notes -->
+        <div class="info-card">
+          <div class="info-header">
+            <svg class="info-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <h3>Important Notes</h3>
+          </div>
+          <ul class="info-list">
+            <li>
+              <strong>Weekend/Holiday Extensions:</strong> When a deadline falls on a weekend or public holiday, it is automatically extended to the next business day.
+            </li>
+            <li>
+              <strong>E-Invoice Submissions:</strong> All invoices must be submitted electronically (e-fatura) through certified software or Portal das Finanças.
+            </li>
+            <li>
+              <strong>Late Penalties:</strong> Missing deadlines can result in fines and interest charges. Set up calendar reminders well in advance.
+            </li>
+            <li>
+              <strong>Activity Codes (CAEs):</strong> Ensure your activity codes are correctly registered as they affect your tax regime and obligations.
+            </li>
+            <li>
+              <strong>Record Keeping:</strong> Keep all invoices, receipts, and financial records for at least 10 years as required by Portuguese law.
+            </li>
+            <li>
+              <strong>Professional Advice:</strong> For complex situations or when in doubt, consult with a certified accountant (Contabilista Certificado).
+            </li>
+          </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="links-card">
+          <h3>Useful Links</h3>
+          <div class="links-grid">
+            <a href="https://www.portaldasfinancas.gov.pt" target="_blank" rel="noopener noreferrer" class="link-item">
+              <svg class="link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+              </svg>
+              <span>Portal das Finanças</span>
+            </a>
+            <a href="https://www.seg-social.pt/inicio" target="_blank" rel="noopener noreferrer" class="link-item">
+              <svg class="link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+              </svg>
+              <span>Segurança Social Direta</span>
+            </a>
+            <a href="https://www.e-fatura.pt" target="_blank" rel="noopener noreferrer" class="link-item">
+              <svg class="link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+              </svg>
+              <span>e-Fatura Portal</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <Footer />
+
+    <style>
+      main {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+      }
+
+      .calendar-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 3rem 1.5rem;
+      }
+
+      .header-section {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .header-section h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: rgb(15, 23, 42);
+      }
+
+      .subtitle {
+        font-size: 1.125rem;
+        color: rgb(100, 116, 139);
+        margin: 0;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .calendar-section {
+        margin-bottom: 3rem;
+      }
+
+      .section-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .icon-wrapper {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .icon-wrapper.monthly {
+        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+      }
+
+      .icon-wrapper.quarterly {
+        background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+      }
+
+      .icon-wrapper.annual {
+        background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+      }
+
+      .icon {
+        width: 28px;
+        height: 28px;
+        color: white;
+      }
+
+      .section-header h2 {
+        font-size: 1.75rem;
+        color: rgb(15, 23, 42);
+        margin: 0;
+      }
+
+      .deadline-card {
+        background: white;
+        border: 1px solid rgb(226, 232, 240);
+        border-radius: 12px;
+        padding: 1.75rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .deadline-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      }
+
+      .deadline-card:last-child {
+        margin-bottom: 0;
+      }
+
+      .deadline-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .deadline-header h3 {
+        font-size: 1.25rem;
+        color: rgb(15, 23, 42);
+        margin: 0;
+      }
+
+      .deadline-badge {
+        display: inline-block;
+        padding: 0.375rem 0.875rem;
+        border-radius: 6px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .deadline-badge.monthly {
+        background: rgba(59, 130, 246, 0.1);
+        color: rgb(30, 64, 175);
+      }
+
+      .deadline-badge.quarterly {
+        background: rgba(139, 92, 246, 0.1);
+        color: rgb(91, 33, 182);
+      }
+
+      .deadline-badge.annual {
+        background: rgba(13, 148, 136, 0.1);
+        color: rgb(15, 118, 110);
+      }
+
+      .deadline-details {
+        margin-top: 1rem;
+      }
+
+      .detail-row {
+        display: flex;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+        align-items: baseline;
+      }
+
+      .detail-label {
+        font-weight: 600;
+        color: rgb(71, 85, 105);
+        min-width: 80px;
+      }
+
+      .detail-value {
+        color: rgb(15, 23, 42);
+        font-weight: 500;
+      }
+
+      .deadline-description {
+        color: rgb(71, 85, 105);
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
+
+      .deadline-example {
+        background: rgb(254, 252, 232);
+        border-left: 3px solid rgb(234, 179, 8);
+        padding: 0.875rem 1rem;
+        border-radius: 4px;
+        font-size: 0.9375rem;
+        color: rgb(71, 85, 105);
+        margin-top: 1rem;
+      }
+
+      .deadline-timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-top: 1rem;
+        background: rgb(248, 250, 252);
+        padding: 1.25rem;
+        border-radius: 8px;
+      }
+
+      .timeline-item {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: 0.9375rem;
+      }
+
+      .timeline-quarter {
+        font-weight: 600;
+        color: rgb(15, 23, 42);
+        min-width: 100px;
+      }
+
+      .timeline-arrow {
+        color: rgb(148, 163, 184);
+      }
+
+      .timeline-deadline {
+        color: rgb(71, 85, 105);
+      }
+
+      .info-card {
+        background: linear-gradient(135deg, rgb(239, 246, 255) 0%, rgb(224, 242, 254) 100%);
+        border: 1px solid rgb(191, 219, 254);
+        border-radius: 12px;
+        padding: 1.75rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .info-header {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+      }
+
+      .info-icon {
+        width: 24px;
+        height: 24px;
+        color: rgb(37, 99, 235);
+      }
+
+      .info-header h3 {
+        font-size: 1.25rem;
+        color: rgb(30, 64, 175);
+        margin: 0;
+      }
+
+      .info-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .info-list li {
+        padding: 0.75rem 0;
+        color: rgb(30, 58, 138);
+        line-height: 1.6;
+        border-bottom: 1px solid rgb(191, 219, 254);
+      }
+
+      .info-list li:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .links-card {
+        background: white;
+        border: 1px solid rgb(226, 232, 240);
+        border-radius: 12px;
+        padding: 1.75rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      }
+
+      .links-card h3 {
+        font-size: 1.25rem;
+        color: rgb(15, 23, 42);
+        margin-bottom: 1.25rem;
+      }
+
+      .links-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+      }
+
+      .link-item {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem;
+        background: rgb(248, 250, 252);
+        border: 1px solid rgb(226, 232, 240);
+        border-radius: 8px;
+        text-decoration: none;
+        color: rgb(15, 23, 42);
+        transition: all 0.2s;
+      }
+
+      .link-item:hover {
+        background: rgb(240, 253, 250);
+        border-color: rgb(13, 148, 136);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(13, 148, 136, 0.1);
+      }
+
+      .link-icon {
+        width: 20px;
+        height: 20px;
+        color: rgb(13, 148, 136);
+        flex-shrink: 0;
+      }
+
+      .link-item span {
+        font-weight: 500;
+        font-size: 0.9375rem;
+      }
+
+      @media (max-width: 768px) {
+        .calendar-container {
+          padding: 2rem 1rem;
+        }
+
+        .header-section h1 {
+          font-size: 2rem;
+        }
+
+        .section-header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .deadline-header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .timeline-item {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.25rem;
+        }
+
+        .timeline-arrow {
+          display: none;
+        }
+
+        .links-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </body>
+</html>
