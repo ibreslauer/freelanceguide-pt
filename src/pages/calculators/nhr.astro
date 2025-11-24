@@ -26,8 +26,7 @@ import { SITE_TITLE } from "../../consts";
         </div>
 
         <div class="assumptions-card">
-          <h2>Assumptions</h2>
-          <p>This calculator assumes that:</p>
+          <h2>This calculator assumes that:</h2>
           <ul>
             <li>You are a tax resident in Portugal</li>
             <li>
@@ -40,16 +39,16 @@ import { SITE_TITLE } from "../../consts";
               (Simplified Regime)
             </li>
             <li>
-              All of your income results from a high-valued activity included
-              in the list for RNH
+              All of your income results from a high-valued activity included in
+              the list for RNH
             </li>
             <li>
-              All of your income is from providing services (Prestação de serviços)
-              for Social Security calculation purposes
+              All of your income is from providing services (Prestação de
+              serviços) for Social Security calculation purposes
             </li>
             <li>
-              You are selecting the minimum Social Security contributions (applying
-              -25% variation to minimize payments)
+              You are selecting the minimum Social Security contributions
+              (applying -25% variation to minimize payments)
             </li>
           </ul>
         </div>
@@ -86,11 +85,15 @@ import { SITE_TITLE } from "../../consts";
                   value="0.214"
                   checked
                 />
-                <span>Trabalhador Independente (Independent worker) (21.4%)</span>
+                <span
+                  >Trabalhador Independente (Independent worker) (21.4%)</span
+                >
               </label>
               <label class="radio-label">
                 <input type="radio" name="contributorType" value="0.252" />
-                <span>Empresário em Nome Individual (Sole proprietor) (25.2%)</span>
+                <span
+                  >Empresário em Nome Individual (Sole proprietor) (25.2%)</span
+                >
               </label>
             </div>
           </div>
@@ -100,15 +103,13 @@ import { SITE_TITLE } from "../../consts";
           <h2>Income Tax Calculation</h2>
           <div class="results-grid">
             <div class="result-item">
-              <span class="result-label"
-                >Rendimento bruto (Gross income)</span
-              >
+              <span class="result-label">Rendimento bruto (Gross income)</span>
               <span class="result-value" id="grossIncomeDisplay">€ 0.00</span>
             </div>
             <div class="result-item">
               <span class="result-label"
-                >Coeficiente regime simplificado (Simplified regime
-                coefficient) - 75%</span
+                >Coeficiente regime simplificado (Simplified regime coefficient)
+                - 75%</span
               >
               <span class="result-value" id="coefficient">€ 0.00</span>
             </div>
@@ -119,9 +120,7 @@ import { SITE_TITLE } from "../../consts";
               <span class="result-value" id="taxableIncome">€ 0.00</span>
             </div>
             <div class="result-item">
-              <span class="result-label"
-                >Taxa NHR (NHR tax rate) - 20%</span
-              >
+              <span class="result-label">Taxa NHR (NHR tax rate) - 20%</span>
               <span class="result-value">20%</span>
             </div>
             <div class="result-item highlight">
@@ -149,9 +148,7 @@ import { SITE_TITLE } from "../../consts";
               <span class="result-value" id="relevantIncome">€ 0.00</span>
             </div>
             <div class="result-item">
-              <span class="result-label"
-                >Base mensal (Monthly base, BIC)</span
-              >
+              <span class="result-label">Base mensal (Monthly base, BIC)</span>
               <span class="result-value" id="monthlyBase">€ 0.00</span>
             </div>
             <div class="result-item">
@@ -179,15 +176,11 @@ import { SITE_TITLE } from "../../consts";
           <h2>Final Take-Home Calculation</h2>
           <div class="results-grid">
             <div class="result-item">
-              <span class="result-label"
-                >Rendimento bruto (Gross income)</span
-              >
+              <span class="result-label">Rendimento bruto (Gross income)</span>
               <span class="result-value" id="grossFinal">€ 0.00</span>
             </div>
             <div class="result-item">
-              <span class="result-label"
-                >IRS (Income tax)</span
-              >
+              <span class="result-label">IRS (Income tax)</span>
               <span class="result-value" id="taxFinal">€ 0.00</span>
             </div>
             <div class="result-item">
@@ -224,22 +217,28 @@ import { SITE_TITLE } from "../../consts";
               <strong>Income Tax (IRS)</strong> = Gross Annual Income × 0.75 × 0.20
             </p>
             <p class="formula-explanation">
-              <strong>Step 1:</strong> Apply 75% coefficient (Regime
-              Simplificado deducts 25% for expenses)<br />
-              <strong>Step 2:</strong> Apply 20% flat tax rate (NHR rate for
-              high-valued activities)
+              <strong>Step 1:</strong> Apply 75% coefficient (Regime Simplificado
+              deducts 25% for expenses)<br />
+              <strong>Step 2:</strong> Apply 20% flat tax rate (NHR rate for high-valued
+              activities)
             </p>
           </div>
           <div class="formula" style="margin-top: 1rem;">
             <p>
-              <strong>Social Security (SS)</strong> = min((Gross Income × 0.70 × 0.75) / 12, 12 × IAS) × Rate × 12
+              <strong>Social Security (SS)</strong> = min((Gross Income × 0.70 ×
+              0.75) / 12, 12 × IAS) × Rate × 12
             </p>
             <p class="formula-explanation">
-              <strong>Step 1:</strong> Calculate relevant income (70% of gross for services)<br />
-              <strong>Step 2:</strong> Apply -25% variation (×0.75) for minimum contributions<br />
-              <strong>Step 3:</strong> Divide by 12 to get monthly base (BIC)<br />
-              <strong>Step 4:</strong> Apply ceiling of 12 × IAS (€6,270.00 for 2025)<br />
-              <strong>Step 5:</strong> Apply contribution rate (21.4% or 25.2%)<br />
+              <strong>Step 1:</strong> Calculate relevant income (70% of gross for
+              services)<br />
+              <strong>Step 2:</strong> Apply -25% variation (×0.75) for minimum contributions<br
+              />
+              <strong>Step 3:</strong> Divide by 12 to get monthly base (BIC)<br
+              />
+              <strong>Step 4:</strong> Apply ceiling of 12 × IAS (€6,270.00 for 2025)<br
+              />
+              <strong>Step 5:</strong> Apply contribution rate (21.4% or 25.2%)<br
+              />
               <strong>Step 6:</strong> Multiply by 12 for annual contribution
             </p>
           </div>
@@ -261,7 +260,8 @@ import { SITE_TITLE } from "../../consts";
           <p>
             <strong>Note:</strong> The NHR regime has specific eligibility requirements
             and may change. Verify your qualification with the Portuguese Tax Authority.
-            Social Security contributions are capped at 12 × IAS (2025: €6,270.00 monthly base).
+            Social Security contributions are capped at 12 × IAS (2025: €6,270.00
+            monthly base).
           </p>
         </div>
       </div>
@@ -300,17 +300,18 @@ import { SITE_TITLE } from "../../consts";
         // Income Tax Calculation
         const taxableIncome = grossIncome * 0.75;
         const annualTax = taxableIncome * 0.2;
-        const effectiveTaxRate = grossIncome > 0 ? (annualTax / grossIncome) * 100 : 0;
+        const effectiveTaxRate =
+          grossIncome > 0 ? (annualTax / grossIncome) * 100 : 0;
 
         // Social Security Calculation with ceiling and -25% variation (minimum contributions)
         const relevantIncome = grossIncome * 0.7;
         const adjustedRelevantIncome = relevantIncome * 0.75; // Apply -25% variation
         const monthlyBase = adjustedRelevantIncome / 12;
-        
+
         // Apply ceiling: 12 * IAS (monthly maximum base)
         const maxMonthlyBase = 12 * IAS;
         const cappedMonthlyBase = Math.min(monthlyBase, maxMonthlyBase);
-        
+
         const monthlyContribution = cappedMonthlyBase * ssRate;
         const annualSS = monthlyContribution * 12;
         const maxCeiling = maxMonthlyBase * ssRate;
@@ -318,7 +319,8 @@ import { SITE_TITLE } from "../../consts";
         // Final Take-Home
         const totalDeductions = annualTax + annualSS;
         const finalTakeHome = grossIncome - totalDeductions;
-        const totalEffectiveRate = grossIncome > 0 ? (totalDeductions / grossIncome) * 100 : 0;
+        const totalEffectiveRate =
+          grossIncome > 0 ? (totalDeductions / grossIncome) * 100 : 0;
 
         // Update Income Tax section
         (
@@ -340,8 +342,9 @@ import { SITE_TITLE } from "../../consts";
           formatCurrency(monthlyBase);
         (document.getElementById("maxCeiling") as HTMLElement).textContent =
           formatCurrency(maxCeiling);
-        (document.getElementById("monthlyContribution") as HTMLElement).textContent =
-          formatCurrency(monthlyContribution);
+        (
+          document.getElementById("monthlyContribution") as HTMLElement
+        ).textContent = formatCurrency(monthlyContribution);
         (document.getElementById("annualSS") as HTMLElement).textContent =
           formatCurrency(annualSS);
 
@@ -352,12 +355,14 @@ import { SITE_TITLE } from "../../consts";
           formatCurrency(annualTax);
         (document.getElementById("ssFinal") as HTMLElement).textContent =
           formatCurrency(annualSS);
-        (document.getElementById("totalDeductions") as HTMLElement).textContent =
-          formatCurrency(totalDeductions);
+        (
+          document.getElementById("totalDeductions") as HTMLElement
+        ).textContent = formatCurrency(totalDeductions);
         (document.getElementById("finalTakeHome") as HTMLElement).textContent =
           formatCurrency(finalTakeHome);
-        (document.getElementById("totalEffectiveRate") as HTMLElement).textContent =
-          formatPercent(totalEffectiveRate);
+        (
+          document.getElementById("totalEffectiveRate") as HTMLElement
+        ).textContent = formatPercent(totalEffectiveRate);
       }
 
       document.addEventListener("DOMContentLoaded", () => {
@@ -421,23 +426,26 @@ import { SITE_TITLE } from "../../consts";
       }
 
       .assumptions-card h2 {
-        font-size: 1.25rem;
-        margin-bottom: 1rem;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
         color: rgb(15, 23, 42);
       }
 
       .assumptions-card p {
-        margin-bottom: 0.75rem;
+        font-size: 0.75rem;
+        margin-bottom: 0.25rem;
         font-weight: 500;
       }
 
       .assumptions-card ul {
+        font-size: 0.75rem;
         margin: 0;
         padding-left: 1.5rem;
       }
 
       .assumptions-card li {
-        margin-bottom: 0.5rem;
+        font-size: 0.75rem;
+        margin-bottom: 0.25rem;
         color: rgb(51, 65, 85);
       }
 
