@@ -10,8 +10,8 @@
 
 @layer base {
   :root {
-    --accent: #0d9488;
-    --accent-dark: #0f766e;
+    --accent: #008C45;
+    --accent-dark: #007038;
     --black: 15, 18, 25;
     --gray: 96, 115, 159;
     --gray-light: 229, 233, 240;
@@ -105,7 +105,7 @@
   a {
     color: rgb(var(--black));
     text-decoration: underline;
-    text-decoration-color: rgba(13, 148, 136, 0.3);
+    text-decoration-color: rgba(0, 140, 69, 0.3);
     text-underline-offset: 2px;
     transition: all 0.2s;
   }
@@ -177,12 +177,12 @@ a.text-white svg {
 a.text-teal-700,
 a.text-teal-700 span,
 a.text-teal-700 svg {
-  color: rgb(15 118 110) !important;
+  color: #008C45 !important;
 }
 a.text-teal-700:hover,
 a.text-teal-700:hover span,
 a.text-teal-700:hover svg {
-  color: rgb(13 148 136) !important;
+  color: #007038 !important;
 }
 
 main {
@@ -227,4 +227,31 @@ table {
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%);
   white-space: nowrap;
+}
+
+/* Protect button styles from Ant Design reset */
+a.bg-teal-600,
+a.bg-teal-600:hover,
+a.bg-white:hover {
+  background-color: inherit !important;
+}
+
+a.bg-teal-600 {
+  background-color: #008C45 !important;
+}
+
+a.bg-teal-600:hover {
+  background-color: #007038 !important;
+}
+
+a.bg-white {
+  background-color: white !important;
+}
+
+a.bg-white:hover {
+  background-color: rgb(248 250 252) !important;
+}
+
+a.border-teal-600 {
+  border-color: #008C45 !important;
 }

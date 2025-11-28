@@ -1,9 +1,9 @@
 ---
 import { SITE_TITLE } from "../consts";
 import HeaderLink from "./HeaderLink.astro";
-import Logo from "./Logo.astro";
-import Dropdown from "./Dropdown.astro";
+import CalculatorsDropdown from "./CalculatorsDropdown.tsx";
 import { getBaseUrl } from "../utils";
+import { Calculator, Calendar, ClipboardList } from "lucide-react";
 
 const base = getBaseUrl();
 ---
@@ -12,21 +12,48 @@ const base = getBaseUrl();
   <nav>
     <div class="logo">
       <a href={base}>
-        <Logo class="logo-icon" size={24} />
-        <span class="logo-text">{SITE_TITLE}</span>
+        <div class="flex flex-row gap-2 items-center">
+          <ClipboardList size={24} client:only="react" />
+          <div class="logo-text-container">
+            <div class="logo-text">{SITE_TITLE}</div>
+            <div class="logo-portugal">PORTUGAL</div>
+          </div>
+        </div>
       </a>
     </div>
     <div class="internal-links">
       <HeaderLink href={`${base}blog`}>Guides</HeaderLink>
-      <Dropdown
-        label="Calculators"
-        items={[
-          { label: "NHR", href: `${base}calculators/nhr` },
-          { label: "Segurança Social", href: `${base}calculators/seguranca-social` },
-        ]}
-      />
-      <HeaderLink href={`${base}tax-calendar`}>Tax Calendar</HeaderLink>
-      <HeaderLink href={`${base}about`}>About</HeaderLink>
+      <div class="calculators-wrapper">
+        <button
+          class="mobile-icon-button"
+          id="calc-icon-button"
+          aria-label="Calculators"
+        >
+          <Calculator size={20} client:only="react" />
+        </button>
+        <div class="desktop-dropdown">
+          <CalculatorsDropdown base={base} client:only="react" />
+        </div>
+        <div class="mobile-dropdown-menu" id="calc-mobile-menu">
+          <a href={`${base}calculators/nhr`} class="mobile-dropdown-item">NHR</a
+          >
+          <a
+            href={`${base}calculators/seguranca-social`}
+            class="mobile-dropdown-item">Segurança Social</a
+          >
+        </div>
+      </div>
+      <div class="tax-calendar-wrapper">
+        <button
+          class="mobile-icon-button"
+          id="calendar-icon-button"
+          aria-label="Tax Calendar"
+        >
+          <Calendar size={20} client:only="react" />
+        </button>
+        <HeaderLink href={`${base}tax-calendar`}>Tax Calendar</HeaderLink>
+      </div>
+      <HeaderLink href={`${base}about`} class="about-link">About</HeaderLink>
     </div>
   </nav>
 </header>
@@ -64,11 +91,25 @@ const base = getBaseUrl();
   }
 
   .logo a:hover {
-    color: rgb(13, 148, 136);
+    color: #008C45;
+  }
+
+  .logo-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: -0.25rem;
+    margin-top: -0.25rem;
+    margin-bottom: -0.25rem;
   }
 
   .logo-text {
     font-size: 1.125rem;
+  }
+
+  .logo-portugal {
+    font-size: 0.75rem;
+    color: #008C45;
+    margin-top: -0.5rem;
   }
 
   .internal-links {
@@ -77,9 +118,32 @@ const base = getBaseUrl();
     align-items: center;
   }
 
+  .calculators-wrapper,
+  .tax-calendar-wrapper {
+    position: relative;
+  }
+
+  .mobile-icon-button,
+  .mobile-icon-link {
+    display: none;
+  }
+
+  .mobile-dropdown-menu {
+    display: none;
+  }
+
   @media (max-width: 640px) {
-    .logo-text {
+    .logo-portugal {
       display: none;
+    }
+    .logo-text-container {
+      display: flex;
+      align-items: center;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .logo-text {
+      font-size: 1rem;
     }
     nav {
       padding: 0.875rem 1rem;
@@ -87,5 +151,109 @@ const base = getBaseUrl();
     .internal-links {
       gap: 1rem;
     }
+
+    /* Hide text labels on mobile */
+    .calculators-wrapper .desktop-dropdown,
+    .tax-calendar-wrapper :global(a[href*="tax-calendar"]) {
+      display: none;
+    }
+
+    /* Show icons on mobile */
+    .mobile-icon-button,
+    .mobile-icon-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgb(15, 23, 42);
+      cursor: pointer;
+      transition: color 0.2s;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+
+    .mobile-icon-button:hover,
+    .mobile-icon-link:hover {
+      color: #008C45;
+    }
+
+    /* Mobile dropdown menu for calculators */
+    .mobile-dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      margin-top: 0.5rem;
+      background: white;
+      border: 1px solid rgb(226, 232, 240);
+      border-radius: 0.375rem;
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+      min-width: 10rem;
+      z-index: 100;
+    }
+
+    .mobile-dropdown-menu.open {
+      display: block;
+    }
+
+    .mobile-dropdown-item {
+      display: block;
+      padding: 0.625rem 1rem;
+      color: rgb(15, 23, 42);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-family: "Readex Pro", sans-serif;
+      transition: background-color 0.2s;
+    }
+
+    .mobile-dropdown-item:hover {
+      background-color: rgb(241, 245, 249);
+    }
+
+    .mobile-dropdown-item:first-child {
+      border-radius: 0.375rem 0.375rem 0 0;
+    }
+
+    .mobile-dropdown-item:last-child {
+      border-radius: 0 0 0.375rem 0.375rem;
+    }
+
+    /* Hide About link on mobile */
+    .about-link {
+      display: none;
+    }
   }
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const calcButton = document.getElementById("calc-icon-button");
+    const calcMenu = document.getElementById("calc-mobile-menu");
+
+    if (calcButton && calcMenu) {
+      calcButton.addEventListener("click", (e) => {
+        e.stopPropagation();
+        calcMenu.classList.toggle("open");
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!calcMenu.contains(e.target as Node) && e.target !== calcButton) {
+          calcMenu.classList.remove("open");
+        }
+      });
+    }
+
+    // Handle calendar button click
+    const calendarButton = document.getElementById("calendar-icon-button");
+    if (calendarButton) {
+      calendarButton.addEventListener("click", () => {
+        const calendarLink = document.querySelector(
+          '.tax-calendar-wrapper a[href*="tax-calendar"]',
+        ) as HTMLAnchorElement;
+        if (calendarLink) {
+          window.location.href = calendarLink.href;
+        }
+      });
+    }
+  });
+</script>

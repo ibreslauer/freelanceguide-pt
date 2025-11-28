@@ -21,6 +21,10 @@ const isActive = href === pathname || href === '/' + (subpath?.[0] || '');
 		font-size: 1rem;
 		font-family: 'Readex Pro', sans-serif;
 		font-weight: 500;
+		transition: color 0.2s;
+	}
+	a:hover {
+		color: #008C45;
 	}
 	a.active {
 		text-decoration: underline;
