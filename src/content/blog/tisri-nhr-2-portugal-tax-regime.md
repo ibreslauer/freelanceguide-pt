@@ -2,7 +2,7 @@
 title: "What is TISRI? Understanding Portugal's NHR 2.0 Tax Regime"
 description: "Complete guide to TISRI (Tax Incentive for Scientific Research and Innovation), Portugal's new NHR 2.0 tax regime. Learn about the 20% flat tax rate, eligibility criteria, qualifying professions, and how to apply for this 10-year tax benefit."
 pubDate: 2025-12-03
-heroImage: "../../assets/fallback-image.jpg"
+heroImage: "../../assets/blog-tisri-remote-worker.jpg"
 ---
 
 Portugal has introduced a new tax regime designed to attract highly qualified professionals, researchers, and innovators. Officially called the **Tax Incentive for Scientific Research and Innovation (TISRI)**, or **Incentivo Fiscal à Investigação Científica e Inovação (IFICI)** in Portuguese, this regime is widely known as **NHR 2.0** because it replaced the previous Non-Habitual Resident (NHR) tax regime.
@@ -31,6 +31,7 @@ TISRI offers substantial tax advantages over a 10-year period. Here's what you g
 **Portuguese-sourced income** from qualifying activities is taxed at a flat rate of **20%**, instead of Portugal's standard progressive income tax rates (which can reach up to 53%).
 
 This applies to:
+
 - Employment income from qualifying professions
 - Self-employment income from qualifying activities
 
@@ -75,6 +76,7 @@ You must **not have been a tax resident** in Portugal in the **five years** imme
 ### 3. No Previous Benefit from NHR or Similar Regime
 
 You must **not have previously benefited** from:
+
 - The old NHR (Non-Habitual Resident) regime
 - The "ex-resident" tax incentive
 
@@ -91,6 +93,7 @@ TISRI is designed for specific high-value sectors. Here are the main qualifying 
 ### 1. Higher Education Teaching and Scientific Research
 
 Activities related to:
+
 - University-level teaching positions
 - Academic research
 - Scientific investigation
@@ -109,6 +112,7 @@ These are typically strategic investment projects that the Portuguese government
 ### 3. Highly Qualified Professions in Export-Oriented Companies
 
 Highly qualified jobs in:
+
 - **Industrial companies** that export at least 50% of their turnover
 - **Service companies** that export at least 50% of their turnover
 - **Companies with eligible private investments** certified by relevant authorities
@@ -132,6 +136,7 @@ While not always explicitly defined, "highly qualified" typically means:
 - **Strategic roles**: Positions that contribute significantly to innovation, R&D, or export growth
 
 Common qualifying fields include:
+
 - Software engineering and data science
 - Biotechnology and life sciences
 - Engineering (mechanical, electrical, aerospace, etc.)
@@ -156,6 +161,7 @@ Register your residence with local authorities and obtain your NIF (tax identifi
 ### Step 2: Confirm Your Activity Qualifies
 
 Before applying, ensure:
+
 - Your employer or activity meets the qualifying criteria
 - You have documentation proving the activity is eligible (employer certificates, startup certification, university contract, etc.)
 
@@ -164,6 +170,7 @@ Before applying, ensure:
 **Critical Deadline**: The application for TISRI status must be submitted by **January 15th** of the year **following** the one in which you became a tax resident.
 
 **Example**:
+
 - You become a Portuguese tax resident in 2025
 - Application deadline: January 15, 2026
 
@@ -201,6 +208,7 @@ Unlike the old NHR, which was relatively easy to obtain, TISRI applications are 
 ### 2. Ongoing Compliance
 
 To maintain TISRI status, you must:
+
 - Continue to engage in qualifying activities
 - Remain a Portuguese tax resident
 - Report all income (including exempt foreign income) annually
@@ -212,6 +220,7 @@ If you change jobs to a non-qualifying activity, you may lose TISRI benefits for
 Even though foreign income is exempt, it's used to calculate your tax bracket for Portuguese-sourced income. This is called "exemption with progression."
 
 **Example**:
+
 - Portuguese income: €40,000 (taxed at 20% flat under TISRI)
 - Foreign dividend income: €20,000 (exempt, but reported)
 - The €20,000 may still affect your marginal rate for other income or social security calculations
@@ -238,14 +247,14 @@ Work with a cross-border tax specialist if you have income from multiple countri
 
 ## TISRI vs. Old NHR: Quick Comparison
 
-| Feature                   | Old NHR                              | TISRI (NHR 2.0)                                   |
-| ------------------------- | ------------------------------------ | ------------------------------------------------- |
-| **Eligibility**           | Broad (many professions + retirees)  | Narrow (research, innovation, high-value sectors) |
-| **Portuguese Income Tax** | Varies by profession (often 20%)     | Flat 20% for qualifying activities                |
-| **Foreign Income**        | Generally exempt                     | Generally exempt (but not pensions)               |
-| **Foreign Pensions**      | Taxed at 10% (or exempt if taxable elsewhere) | Taxed at standard progressive rates      |
-| **Application Period**    | Until 2023 (closed for new in 2024)  | 2024 onwards                                      |
-| **Target Audience**       | General expat appeal                 | Highly qualified professionals & researchers      |
+| Feature                   | Old NHR                                       | TISRI (NHR 2.0)                                   |
+| ------------------------- | --------------------------------------------- | ------------------------------------------------- |
+| **Eligibility**           | Broad (many professions + retirees)           | Narrow (research, innovation, high-value sectors) |
+| **Portuguese Income Tax** | Varies by profession (often 20%)              | Flat 20% for qualifying activities                |
+| **Foreign Income**        | Generally exempt                              | Generally exempt (but not pensions)               |
+| **Foreign Pensions**      | Taxed at 10% (or exempt if taxable elsewhere) | Taxed at standard progressive rates               |
+| **Application Period**    | Until 2023 (closed for new in 2024)           | 2024 onwards                                      |
+| **Target Audience**       | General expat appeal                          | Highly qualified professionals & researchers      |
 
 ## Who Benefits Most from TISRI?
 
@@ -274,6 +283,7 @@ If you're a freelancer or consultant considering TISRI:
 ### 1. Structure Your Work Carefully
 
 To maximize your chances:
+
 - Partner with certified startups or qualifying companies
 - Focus on innovation-heavy projects (R&D, product development)
 - Document the high-value nature of your work
@@ -281,6 +291,7 @@ To maximize your chances:
 ### 2. Get Pre-Approval Guidance
 
 Before relocating, consult with:
+
 - A Portuguese tax advisor familiar with TISRI
 - The relevant certification authority (IAPMEI, AICEP, etc.)
 
@@ -289,6 +300,7 @@ Confirm your activity will qualify **before** you commit to moving.
 ### 3. Maintain Detailed Records
 
 Keep thorough documentation of:
+
 - Your qualifying activities
 - Client contracts showing high-value work
 - Export revenue if applicable (for company clients)
@@ -336,7 +348,7 @@ TISRI is an individual benefit. Your spouse or dependents would need to qualify 
 
 TISRI is complex and has significant financial implications. Before applying:
 
-- **Hire a Portuguese tax advisor** (*contabilista* or tax lawyer) with TISRI experience
+- **Hire a Portuguese tax advisor** (_contabilista_ or tax lawyer) with TISRI experience
 - **Consult with cross-border tax specialists** if you have foreign income
 - **Coordinate with your employer** to ensure proper documentation and certification
 
