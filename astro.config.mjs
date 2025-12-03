@@ -10,9 +10,10 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://ibreslauer.github.io/freelanceguide-pt/",
-  base:
-    process.env.NODE_ENV === "production" ? "/freelanceguide-pt" : undefined,
+  site: process.env.CF_PAGES
+    ? "https://freelanceguide-pt.ivan-breslauer.workers.dev"
+    : "https://ibreslauer.github.io/freelanceguide-pt/",
+  base: process.env.CF_PAGES ? undefined : "/freelanceguide-pt",
   integrations: [mdx(), sitemap(), react()],
 
   vite: {
