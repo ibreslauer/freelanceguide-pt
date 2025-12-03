@@ -54,20 +54,20 @@ Here's how your monthly contribution is calculated with a variation adjustment:
 
 **Example without adjustment:**
 
-- Total declared income: €23,657.41
-- Rendimento relevante (70% coefficient for services): €16,560.19
-- Monthly BIC: €16,560.19 ÷ 3 = €5,520.06
-- Monthly contribution (21.4%): €5,520.06 × 21.4% = **€1,181.29**
+- Total declared income: €10,000
+- Rendimento relevante (70% coefficient for services): €7,000
+- Monthly BIC: €7,000 ÷ 3 = €2,333.33
+- Monthly contribution (21.4%): €2,333.33 × 21.4% = **€499.33**
 
 **Example with –25% adjustment:**
 
-- Total declared income: €23,657.41
-- Rendimento relevante (70% coefficient): €16,560.19
-- Variation adjustment: €16,560.19 × (1 – 0.25) = €12,420.14
-- Monthly BIC: €12,420.14 ÷ 3 = €4,140.05
-- Monthly contribution (21.4%): €4,140.05 × 21.4% = **€885.97**
+- Total declared income: €10,000
+- Rendimento relevante (70% coefficient): €7,000
+- Variation adjustment: €7,000 × (1 – 0.25) = €5,250
+- Monthly BIC: €5,250 ÷ 3 = €1,750
+- Monthly contribution (21.4%): €1,750 × 21.4% = **€374.50**
 
-**Monthly savings: €295.32** (permanently, not deferred)
+**Monthly savings: €124.83** (permanently, not deferred)
 
 ## Accessing the Variation Percentage Option
 
