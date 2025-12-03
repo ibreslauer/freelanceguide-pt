@@ -2,7 +2,7 @@
 title: "How to Lower Your Segurança Social Payments: Understanding the Variation Percentage Adjustment"
 description: "Learn how Portuguese freelancers can legally reduce their social security contributions by up to 25% using the variation percentage adjustment. Understand what it really means, when to use it, and how it affects your future benefits."
 pubDate: 2025-12-03
-heroImage: "../../assets/fallback-image.jpg"
+heroImage: "../../assets/blog-3-seguranca-social-adjustment.jpg"
 ---
 
 If you're a freelancer in Portugal paying into **Segurança Social**, you might have noticed an option to adjust your contributions using a "**variation percentage**" (percentagem de variação) ranging from –25% to +25%. This feature can significantly impact your monthly social security payments—but it's often misunderstood.
