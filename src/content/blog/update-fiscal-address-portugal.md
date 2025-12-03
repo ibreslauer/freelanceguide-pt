@@ -2,7 +2,7 @@
 title: "How to Update Your Fiscal Address in Portal das Finanças: Complete Guide"
 description: "Step-by-step guide for updating your fiscal address in Portugal's Portal das Finanças. Learn the requirements, process, and deadlines for keeping your tax residence information current with Autoridade Tributária."
 pubDate: 2025-12-03
-heroImage: "../../assets/fallback-image.jpg"
+heroImage: "../../assets/blog-3-fiscal-address.jpg"
 ---
 
 Moving to a new address in Portugal? Whether you're relocating within the country or updating your details as a non-resident, keeping your fiscal address current with the Portuguese Tax Authority (**Autoridade Tributária e Aduaneira**) is not just important—it's legally required. Here's everything you need to know about updating your address in the Finanças portal.
