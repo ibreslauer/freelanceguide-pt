@@ -7,7 +7,7 @@ heroImage: "../../assets/blog-3-seguranca-social-adjustment.jpg"
 
 If you're a freelancer in Portugal paying into **Segurança Social**, you might have noticed an option to adjust your contributions using a "**variation percentage**" (percentagem de variação) ranging from –25% to +25%. This feature can significantly impact your monthly social security payments—but it's often misunderstood.
 
-Many freelancers wonder: *"If I reduce my payments by 25% now, will I owe that money later?"*
+Many freelancers wonder: _"If I reduce my payments by 25% now, will I owe that money later?"_
 
 The answer might surprise you: **No, you won't.** The –25% adjustment is not a deferral or an installment plan—it's a **permanent reduction** in your contributions for those periods. But like most things with social security, there's a tradeoff.
 
@@ -19,7 +19,7 @@ When you choose to **reduce your "rendimento relevante" by up to 25%**, you're t
 
 > "Please calculate my future contributions based on a smaller base than my actual declared income."
 
-It's not an installment plan or a deferral—it's an **optional adjustment mechanism** designed to give you flexibility *at the time of payment*.
+It's not an installment plan or a deferral—it's an **optional adjustment mechanism** designed to give you flexibility _at the time of payment_.
 
 ### The Key Points
 
@@ -82,38 +82,43 @@ To adjust your variation percentage, you'll need to access Segurança Social Dir
 ![Variation Percentage Selection Interface - Screenshot showing the slider from -25% to +25%]
 
 The interface shows:
+
 - Clear explanation of what the variation percentage does
 - The minimum contribution base (€20.00) and maximum (12 × IAS)
 - A slider to select your preferred percentage
 - Immediate calculation preview
 
-## When There *Is* Later Reconciliation
+## When There _Is_ Later Reconciliation
 
-There *is* a form of **yearly adjustment**, but it's not about the ±25% option—it's about the link between **IRS (tax) income** and **Segurança Social's contributory base**.
+There _is_ a form of **yearly adjustment**, but it's not about the ±25% option—it's about the link between **IRS (tax) income** and **Segurança Social's contributory base**.
 
 ### Income Under-Reporting vs. Variation Adjustment
 
 It's crucial to understand the difference:
 
 **Using the –25% variation adjustment:**
+
 - ✅ Completely legal and intentional
 - ✅ No future reconciliation or catch-up required
 - ✅ Your contributions are considered final and complete
 
 **Under-reporting your income:**
+
 - ❌ Declaring less income than you actually earned
 - ❌ Can trigger retroactive adjustments by Segurança Social
 - ❌ May result in penalties and interest charges
 
 ### The Annual Reconciliation Process
 
-If your annual IRS declarations reveal income that was **under-reported or misclassified** (e.g., you declared less each trimester than you actually earned for the year), Segurança Social can update your base *going forward*, not retroactively.
+If your annual IRS declarations reveal income that was **under-reported or misclassified** (e.g., you declared less each trimester than you actually earned for the year), Segurança Social can update your base _going forward_, not retroactively.
 
 **What they DO:**
+
 - Adjust your **future contribution base** based on corrected income data
 - Update your bracket for upcoming payment periods
 
 **What they DON'T do:**
+
 - Come back and bill you retroactively for using the –25% adjustment
 - Charge you the difference between your adjusted and non-adjusted contributions
 - Penalize you for legally using the variation percentage system
@@ -134,7 +139,7 @@ If you were **below the contribution ceiling**, your –25% choice simply means 
 
 However, because **benefits** (pensions, sickness, parental leave, unemployment protection, etc.) are **based on your declared base**, your **future entitlements** are also proportionally lower.
 
-**You're not *deferring* payment—you're choosing to contribute less now, and consequently, you'll accrue fewer benefits later.**
+**You're not _deferring_ payment—you're choosing to contribute less now, and consequently, you'll accrue fewer benefits later.**
 
 ### Above the Ceiling
 
@@ -153,12 +158,14 @@ The variation percentage system isn't free money—it's a **strategic cash flow 
 ### What You Gain (Short-Term)
 
 **Immediate cash flow relief:**
+
 - Lower monthly payments free up working capital
 - Helps during seasonal income fluctuations
 - Reduces financial pressure during business growth phases
 - Allows you to invest more in your business
 
 **Example savings:**
+
 - Normal contribution on €4,000 base: €856/month
 - With –25% adjustment on €3,000 base: €642/month
 - **Monthly savings: €214** (€2,568 annually)
@@ -175,7 +182,7 @@ The variation percentage system isn't free money—it's a **strategic cash flow 
 
 **The pension impact:**
 
-Your pension will be computed as if you earned the *adjusted* amount, not your actual income.
+Your pension will be computed as if you earned the _adjusted_ amount, not your actual income.
 
 - Contributing on €4,000/month → pension calculated on €4,000/month base
 - Contributing on €3,000/month (–25%) → pension calculated on €3,000/month base
@@ -186,15 +193,15 @@ Over decades, this compounds significantly.
 
 Let's consolidate everything into a clear reference:
 
-| Situation | Effect |
-|-----------|--------|
-| Apply –25% adjustment | You pay 25% less each month, permanently |
-| Later "catch-up"? | ❌ No, unless you under-declared income |
-| Under contribution ceiling | ✅ Fully valid; you just reduce payments |
+| Situation                  | Effect                                       |
+| -------------------------- | -------------------------------------------- |
+| Apply –25% adjustment      | You pay 25% less each month, permanently     |
+| Later "catch-up"?          | ❌ No, unless you under-declared income      |
+| Under contribution ceiling | ✅ Fully valid; you just reduce payments     |
 | Above contribution ceiling | ✅ Still capped; adjustment might do nothing |
-| Long-term effect | Lower social protection and pension base |
-| Reversible? | ✅ Yes, you can adjust quarterly |
-| Affects current taxes? | ❌ No, only social security contributions |
+| Long-term effect           | Lower social protection and pension base     |
+| Reversible?                | ✅ Yes, you can adjust quarterly             |
+| Affects current taxes?     | ❌ No, only social security contributions    |
 
 ## Practical Example: Real Numbers
 
@@ -203,6 +210,7 @@ Let's walk through a realistic scenario to see exactly how this works:
 ### Scenario: Steady Freelance Income
 
 **Your profile:**
+
 - Freelance web developer
 - Declared income: €48,000/year (€4,000/month average)
 - Activity coefficient: 70% (services)
@@ -214,6 +222,7 @@ Let's walk through a realistic scenario to see exactly how this works:
 ### Option A: No Variation Adjustment (0%)
 
 **Quarterly contribution:**
+
 - Monthly base: €2,800
 - Monthly payment: €2,800 × 21.4% = **€599.20**
 - Quarterly total: €599.20 × 3 = **€1,797.60**
@@ -223,6 +232,7 @@ Let's walk through a realistic scenario to see exactly how this works:
 ### Option B: With –25% Variation Adjustment
 
 **Quarterly contribution:**
+
 - Adjusted relevant income: €8,400 × (1 – 0.25) = €6,300
 - Monthly base: €6,300 ÷ 3 = €2,100
 - Monthly payment: €2,100 × 21.4% = **€449.40**
@@ -240,6 +250,7 @@ Let's walk through a realistic scenario to see exactly how this works:
 - **Option B** (–25% adjustment): Pension calculated on average €2,100/month base
 
 If the pension replacement rate is 60%:
+
 - **Option A pension**: €1,680/month
 - **Option B pension**: €1,260/month
 - **Lifetime difference**: €420/month (potentially €5,040/year for decades)
@@ -253,26 +264,31 @@ The variation percentage can be a powerful tool when used strategically:
 ### Good Reasons to Use –25%
 
 **1. Starting a new business**
+
 - You need maximum cash flow for business growth
 - You're investing heavily in equipment, marketing, or scaling
 - Your income is still building and unpredictable
 
 **2. Seasonal income fluctuations**
+
 - Your work has natural high and low seasons
 - Reduce contributions during slow periods
 - Increase back to 0% or even +25% during busy periods
 
 **3. Large one-time expenses**
+
 - Unexpected business costs
 - Major equipment purchases
 - Temporary cash flow squeeze
 
 **4. You have supplemental retirement savings**
+
 - You're maxing out a private pension plan (PPR)
 - You have other investments for retirement
 - Social security pension isn't your primary retirement strategy
 
 **5. Short-term freelancing**
+
 - You don't plan to freelance long-term
 - You're transitioning to employment soon
 - You're only freelancing temporarily
@@ -280,24 +296,29 @@ The variation percentage can be a powerful tool when used strategically:
 ### When to Avoid the –25% Adjustment
 
 **1. Long-term career freelancers**
+
 - Freelancing is your primary career path
 - You depend on social security for retirement
 - You want maximum pension benefits
 
 **2. You're close to the minimum base**
+
 - Already contributing near the minimum (€20 × 3 = €60/month base)
 - Further reduction provides minimal savings
 - Could disqualify you from certain benefits
 
 **3. You're planning parental leave**
+
 - Benefits are calculated from your recent contribution base
 - Reducing now could significantly lower your parental leave payments
 
 **4. Health concerns**
+
 - If you might need sickness benefits soon
 - Disability coverage is proportional to your base
 
 **5. You're already near retirement**
+
 - Your final contribution years heavily weight your pension calculation
 - Reducing now has outsized impact on your pension amount
 
@@ -318,18 +339,18 @@ Rather than permanently setting –25% or 0%, consider a **dynamic strategy**:
    - **Average quarter?** → Stick with 0%
 
 3. **Track your average over time:**
-   - Aim for an *average* closer to 0% over your career
+   - Aim for an _average_ closer to 0% over your career
    - Use reductions tactically, not as a default
    - Balance short-term relief with long-term security
 
 ### Example: Dynamic Strategy Over One Year
 
-| Quarter | Business Status | Adjustment | Monthly Payment |
-|---------|----------------|------------|-----------------|
-| Q1 2025 | Slow start | –25% | €449.40 |
-| Q2 2025 | Major project | +15% | €688.58 |
-| Q3 2025 | Average | 0% | €599.20 |
-| Q4 2025 | Equipment purchase | –20% | €479.36 |
+| Quarter | Business Status    | Adjustment | Monthly Payment |
+| ------- | ------------------ | ---------- | --------------- |
+| Q1 2025 | Slow start         | –25%       | €449.40         |
+| Q2 2025 | Major project      | +15%       | €688.58         |
+| Q3 2025 | Average            | 0%         | €599.20         |
+| Q4 2025 | Equipment purchase | –20%       | €479.36         |
 
 **Annual average adjustment: –7.5%**
 
@@ -356,6 +377,7 @@ Independent worker social security contributions are typically due:
 ### Documentation
 
 **Keep records of:**
+
 - Your variation percentage choices each quarter
 - Payment confirmations
 - Income declarations to Segurança Social
@@ -376,6 +398,7 @@ This documentation is essential if there are ever questions about your contribut
 ### What if I choose +25% instead?
 
 You'll pay more now and accrue higher future benefits. This makes sense if:
+
 - You have extra cash and want to boost your pension
 - You're catching up on benefits after using –25% previously
 - You're approaching retirement and want to maximize your final base
@@ -386,7 +409,7 @@ You'll pay more now and accrue higher future benefits. This makes sense if:
 
 ### Can I use –25% and still qualify for benefits?
 
-**Yes**, but your benefits will be calculated based on your *reduced* contribution base. You don't lose eligibility, just the amount you receive.
+**Yes**, but your benefits will be calculated based on your _reduced_ contribution base. You don't lose eligibility, just the amount you receive.
 
 ### What happens if I don't actively choose?
 
@@ -403,6 +426,7 @@ The default is typically **0%** (no adjustment). If you take no action, your con
 ### Professional Guidance
 
 Consider consulting with:
+
 - **Contabilista (Accountant)**: For personalized contribution strategy
 - **Financial planner**: To balance social security with private retirement savings
 - **Segurança Social adviser**: For questions about specific benefit calculations
@@ -410,9 +434,10 @@ Consider consulting with:
 ### Related Topics
 
 For more guidance on Portuguese freelance compliance:
+
 - [Understanding Faturas in Portugal](/blog/understanding-faturas-portugal) – Invoicing basics
 - [Paying IRS in Installments](/blog/paying-irs-installments-portugal) – Tax payment flexibility
-- [Trabalhador Independente vs Empresário](/blog/trabalhador-independente-vs-empresario-individual) – Choosing your business structure
+- [Trabalhador Independente vs ENI](/blog/trabalhador-independente-vs-empresario-individual) – Choosing your business structure
 
 ## Conclusion
 
@@ -436,4 +461,4 @@ Remember: Every euro you don't contribute today is a euro less in benefits tomor
 
 ---
 
-*Managing your Portuguese freelance finances? Explore our complete guides on [tax calendars](/tax-calendar), [social security calculators](/calculators/seguranca-social), and [freelance best practices](/blog).*
+_Managing your Portuguese freelance finances? Explore our complete guides on [tax calendars](/tax-calendar), [social security calculators](/calculators/seguranca-social), and [freelance best practices](/blog)._

@@ -15,7 +15,7 @@
 }
 
 .dropdown-button:hover {
-  color: #008C45;
+  color: var(--accent);
 }
 
 .dropdown-arrow {
@@ -58,7 +58,7 @@
 .calculators-dropdown-overlay .ant-dropdown-menu-item:hover a,
 .calculators-dropdown-overlay .ant-dropdown-menu-item-active a {
   background-color: rgb(243, 244, 246);
-  color: #008C45;
+  color: var(--accent);
 }
 
 .calculators-dropdown-overlay .ant-dropdown-menu-item:hover {

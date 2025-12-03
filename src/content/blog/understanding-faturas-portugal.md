@@ -1,5 +1,5 @@
 ---
-title: "Understanding Fatura vs Fatura-Recibo in Portugal"
+title: "Fatura and Fatura-Recibo — what's the difference?"
 description: "Learn the essential difference between Fatura and Fatura-Recibo for Portuguese freelancers. Understand which document to use for your Recibos Verdes invoicing to stay compliant with Autoridade Tributária."
 pubDate: 2025-11-22
 heroImage: "../../assets/blog-1-dilemma.jpg"

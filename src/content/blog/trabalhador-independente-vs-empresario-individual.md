@@ -1,5 +1,5 @@
 ---
-title: "Trabalhador Independente vs Empresário em Nome Individual: Which One Are You?"
+title: "Trabalhador Independente vs ENI: Which One Are You?"
 description: "Understand the key differences between Trabalhador Independente and Empresário em Nome Individual in Portugal. Learn which structure fits your freelance or business activity and how it affects your taxes, registration, and liability."
 pubDate: 2025-11-23
 heroImage: "../../assets/fallback-image.jpg"
@@ -13,7 +13,7 @@ The distinction matters because it affects how you register your activity, how y
 
 Before we dive into the differences, here's the most important thing to understand:
 
-**Neither TI nor ENI creates a separate legal entity.** Unlike forming a company (Sociedade Unipessoal por Quotas), you remain a natural person (*Pessoa Singular*). Your business tax number (NIF) is the same as your personal NIF.
+**Neither TI nor ENI creates a separate legal entity.** Unlike forming a company (Sociedade Unipessoal por Quotas), you remain a natural person (_Pessoa Singular_). Your business tax number (NIF) is the same as your personal NIF.
 
 ### What This Means for Liability
 
@@ -50,7 +50,7 @@ Both TI and ENI start with the **Declaração de Início de Atividade** (Declara
 **Activity Codes**: You'll select from the CIRS Article 151 list—specific codes for professional services:
 
 - Code 1000: Architects
-- Code 1001: Engineers  
+- Code 1001: Engineers
 - Code 6010: Lawyers
 - Code 7010: Doctors
 - Code 1519: Other service providers (catch-all for digital freelancers)
@@ -83,11 +83,13 @@ Both TI and ENI are taxed under Category B of IRS, but the calculation differs:
 #### Trabalhador Independente
 
 **Simplified Regime** (most common for small operations):
+
 - Your taxable income is calculated using **coefficients** applied to your revenue
 - Professional services: 0.75 coefficient (75% of revenue is taxable)
 - For example: €30,000 revenue × 0.75 = €22,500 taxable income
 
 **Organized Accounting** (for higher earners):
+
 - Actual expenses deducted from revenue
 - Requires detailed bookkeeping
 - Mandatory if revenue exceeds €200,000
@@ -95,12 +97,14 @@ Both TI and ENI are taxed under Category B of IRS, but the calculation differs:
 #### Empresário em Nome Individual
 
 **Simplified Regime**:
+
 - Different coefficients based on activity type
 - Services: 0.75
 - Sales of goods: 0.15 (only 15% of revenue is taxable)
 - Industrial activities: 0.20
 
 **Additional Obligations**:
+
 - Must manage inventory if selling goods
 - Must communicate stock levels to the Tax Authority (upcoming 2024/2025 requirement)
 
@@ -155,24 +159,28 @@ When you hire as an ENI, you register as an employer with Social Security and pa
 ### For Trabalhador Independente
 
 **Advantages**:
+
 - Simpler registration process
 - Lower administrative burden
 - No inventory management
 - No need for commercial registry
 
 **Limitations**:
+
 - Cannot obtain a commercial business name certificate if your activity is exclusively a "liberal profession" (Article 151 CIRS)
 - Less suitable for scaling with employees
 
 ### For Empresário em Nome Individual
 
 **Advantages**:
+
 - Can operate under a commercial business name
 - Better suited for commercial activities and scaling
 - Lower tax coefficients on goods sold (0.15 vs 0.75)
 - Designed for hiring employees
 
 **Limitations**:
+
 - Higher administrative burden
 - Must manage inventory and communicate stock levels
 - More complex accounting requirements
@@ -214,6 +222,7 @@ In these hybrid cases, the Tax Authority will apply the appropriate tax treatmen
 ### 1. Identify Your Activity
 
 Ask yourself:
+
 - Am I primarily selling my time and expertise? → Likely TI
 - Am I selling physical goods or operating a commercial business? → Likely ENI
 
@@ -228,18 +237,21 @@ Visit the [Portal das Finanças](https://www.portaldasfinancas.gov.pt) and submi
 ### 3. Register with Social Security
 
 Within 10 days of starting your activity, register at:
+
 - [Segurança Social Direta](https://www.seg-social.pt)
 - Choose your contribution bracket
 
 ### 4. (ENI Only) Handle Commercial Registry
 
 If you want a commercial business name:
+
 - Apply for Certificate of Admissibility at IRN
 - Register at the Commercial Registry
 
 ### 5. Start Issuing Invoices
 
 Use the Portal das Finanças or certified invoicing software to issue:
+
 - **Fatura-Recibo** (for immediate payment)
 - **Fatura** (for deferred payment)
 
@@ -266,10 +278,12 @@ Use the Portal das Finanças or certified invoicing software to issue:
 Be aware of recent and upcoming changes:
 
 ### VAT Exemption Threshold
+
 - Increased from €12,500 to **€13,500** (2024)
 - May continue to adjust; check annually
 
 ### Inventory Communication (ENI)
+
 - New obligation for ENI selling goods
 - Must communicate inventory levels to Tax Authority
 - Implementation details still being finalized for 2024/2025
@@ -285,6 +299,7 @@ Be aware of recent and upcoming changes:
 ### Professional Help
 
 Consider consulting with:
+
 - **Contabilista (Accountant)**: Essential for navigating tax regimes
 - **Advogado (Lawyer)**: For complex liability or contract questions
 - **Business advisory services**: For strategic decisions on scaling
@@ -296,14 +311,14 @@ The choice between **Trabalhador Independente** and **Empresário em Nome Indivi
 **Key takeaways**:
 
 - TI = Services based on professional skills and expertise
-- ENI = Commercial activities involving goods or industrial operations  
+- ENI = Commercial activities involving goods or industrial operations
 - Both are natural persons with unlimited liability
 - The distinction affects tax calculations, administrative burden, and registration requirements
 - You can operate as both if your activities span services and commerce
 
 Most digital freelancers and consultants will be Trabalhadores Independentes. If you're selling products or running a commercial establishment, you'll be an Empresário em Nome Individual.
 
-**When in doubt, consult an accountant (*contabilista*) before registering.** They can help you select the right codes and structure your activity correctly from day one, potentially saving you significant administrative headaches and tax optimization opportunities.
+**When in doubt, consult an accountant (_contabilista_) before registering.** They can help you select the right codes and structure your activity correctly from day one, potentially saving you significant administrative headaches and tax optimization opportunities.
 
 ---
 

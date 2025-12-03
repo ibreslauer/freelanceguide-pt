@@ -10,7 +10,7 @@
 
 @layer base {
   :root {
-    --accent: #008C45;
+    --accent: #008c45;
     --accent-dark: #007038;
     --black: 15, 18, 25;
     --gray: 96, 115, 159;
@@ -177,12 +177,12 @@ a.text-white svg {
 a.text-teal-700,
 a.text-teal-700 span,
 a.text-teal-700 svg {
-  color: #008C45 !important;
+  color: var(--accent) !important;
 }
 a.text-teal-700:hover,
 a.text-teal-700:hover span,
 a.text-teal-700:hover svg {
-  color: #007038 !important;
+  color: var(--accent-dark) !important;
 }
 
 main {
@@ -237,11 +237,11 @@ a.bg-white:hover {
 }
 
 a.bg-teal-600 {
-  background-color: #008C45 !important;
+  background-color: var(--accent) !important;
 }
 
 a.bg-teal-600:hover {
-  background-color: #007038 !important;
+  background-color: var(--accent-dark) !important;
 }
 
 a.bg-white {
@@ -253,5 +253,5 @@ a.bg-white:hover {
 }
 
 a.border-teal-600 {
-  border-color: #008C45 !important;
+  border-color: var(--accent) !important;
 }

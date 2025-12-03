@@ -373,4 +373,4 @@ If you're a highly qualified professional in a strategic sector, TISRI can offer
 
 ---
 
-_Considering freelancing or consulting in Portugal? Check out our guides on [Trabalhador Independente vs Empresário Individual](/blog/trabalhador-independente-vs-empresario-individual), [understanding Faturas](/blog/understanding-faturas-portugal), and [managing IRS payments](/blog/paying-irs-installments-portugal)._
+_Considering freelancing or consulting in Portugal? Check out our guides on [Trabalhador Independente vs ENI](/blog/trabalhador-independente-vs-empresario-individual), [understanding Faturas](/blog/understanding-faturas-portugal), and [managing IRS payments](/blog/paying-irs-installments-portugal)._

@@ -58,7 +58,7 @@ import { SITE_TITLE } from "../../consts";
             <h2>Annual Income</h2>
             <div class="form-group">
               <label for="grossIncome"
-                >Gross annual income / Rendimento bruto anual (€)</label
+                >Gross annual income (Rendimento bruto anual) (€)</label
               >
               <input
                 type="number"
@@ -77,7 +77,7 @@ import { SITE_TITLE } from "../../consts";
           <div class="form-section">
             <h2>Segurança Social (Social Security)</h2>
             <div class="form-group">
-              <label>Contributor type / Tipo de contribuinte</label>
+              <label>Contributor type (Tipo de contribuinte)</label>
               <label class="radio-label">
                 <input
                   type="radio"
@@ -86,13 +86,13 @@ import { SITE_TITLE } from "../../consts";
                   checked
                 />
                 <span
-                  >Trabalhador Independente (Independent worker) (21.4%)</span
+                  >Independent worker (Trabalhador Independente) (21.4%)</span
                 >
               </label>
               <label class="radio-label">
                 <input type="radio" name="contributorType" value="0.252" />
                 <span
-                  >Empresário em Nome Individual (Sole proprietor) (25.2%)</span
+                  >Sole proprietor (Empresário em Nome Individual) (25.2%)</span
                 >
               </label>
             </div>
@@ -103,37 +103,39 @@ import { SITE_TITLE } from "../../consts";
           <h2>Income Tax Calculation</h2>
           <div class="results-grid">
             <div class="result-item">
-              <span class="result-label">Rendimento bruto (Gross income)</span>
+              <span class="result-label">Gross income (Rendimento bruto)</span>
               <span class="result-value" id="grossIncomeDisplay">€ 0.00</span>
             </div>
             <div class="result-item">
               <span class="result-label"
-                >Coeficiente regime simplificado (Simplified regime coefficient)
+                >Simplified regime coefficient (Coeficiente regime simplificado)
                 - 75%</span
               >
               <span class="result-value" id="coefficient">€ 0.00</span>
             </div>
             <div class="result-item">
               <span class="result-label"
-                >Rendimento tributável (Taxable income)</span
+                >Taxable income (Rendimento tributável)</span
               >
               <span class="result-value" id="taxableIncome">€ 0.00</span>
             </div>
             <div class="result-item">
-              <span class="result-label">Taxa NHR (NHR tax rate) - 20%</span>
+              <span class="result-label">NHR tax rate (Taxa NHR) - 20%</span>
               <span class="result-value">20%</span>
             </div>
-            <div class="result-item highlight">
-              <span class="result-label"
-                >Imposto anual estimado (Estimated annual income tax)</span
+            <div class="result-item">
+              <span class="result-label bold-label"
+                >Effective income tax rate (Taxa efetiva de IRS)</span
               >
-              <span class="result-value" id="annualTax">€ 0.00</span>
+              <span class="result-value bold-label" id="effectiveRate"
+                >0.00%</span
+              >
             </div>
-            <div class="result-item info">
-              <span class="result-label"
-                >Taxa efetiva de IRS (Effective income tax rate)</span
+            <div class="result-item">
+              <span class="result-label bold-label"
+                >Estimated annual income tax (Imposto anual estimado)</span
               >
-              <span class="result-value" id="effectiveRate">0.00%</span>
+              <span class="result-value bold-label" id="annualTax">€ 0.00</span>
             </div>
           </div>
         </div>
@@ -143,31 +145,33 @@ import { SITE_TITLE } from "../../consts";
           <div class="results-grid">
             <div class="result-item">
               <span class="result-label"
-                >Rendimento relevante (Relevant income) - 70%</span
+                >Relevant income (Rendimento relevante) - 70%</span
               >
               <span class="result-value" id="relevantIncome">€ 0.00</span>
             </div>
             <div class="result-item">
-              <span class="result-label">Base mensal (Monthly base, BIC)</span>
+              <span class="result-label">Monthly base (Base mensal, BIC)</span>
               <span class="result-value" id="monthlyBase">€ 0.00</span>
             </div>
             <div class="result-item">
               <span class="result-label"
-                >Teto máximo (Maximum ceiling - 12 × IAS)</span
+                >Maximum ceiling (Teto máximo - 12 × IAS)</span
               >
               <span class="result-value" id="maxCeiling">€ 0.00</span>
             </div>
             <div class="result-item">
-              <span class="result-label"
-                >Contribuição mensal (Monthly contribution)</span
+              <span class="result-label bold-label"
+                >Monthly contribution (Contribuição mensal)</span
               >
-              <span class="result-value" id="monthlyContribution">€ 0.00</span>
+              <span class="result-value bold-label" id="monthlyContribution"
+                >€ 0.00</span
+              >
             </div>
-            <div class="result-item highlight">
-              <span class="result-label"
-                >Contribuição anual SS (Annual Social Security contribution)</span
+            <div class="result-item">
+              <span class="result-label bold-label"
+                >Annual Social Security contribution (Contribuição anual SS)</span
               >
-              <span class="result-value" id="annualSS">€ 0.00</span>
+              <span class="result-value bold-label" id="annualSS">€ 0.00</span>
             </div>
           </div>
         </div>
@@ -176,36 +180,40 @@ import { SITE_TITLE } from "../../consts";
           <h2>Final Take-Home Calculation</h2>
           <div class="results-grid">
             <div class="result-item">
-              <span class="result-label">Rendimento bruto (Gross income)</span>
+              <span class="result-label">Gross income (Rendimento bruto)</span>
               <span class="result-value" id="grossFinal">€ 0.00</span>
             </div>
             <div class="result-item">
-              <span class="result-label">IRS (Income tax)</span>
+              <span class="result-label">Income tax (IRS)</span>
               <span class="result-value" id="taxFinal">€ 0.00</span>
             </div>
             <div class="result-item">
               <span class="result-label"
-                >Segurança Social (Social Security)</span
+                >Social Security (Segurança Social)</span
               >
               <span class="result-value" id="ssFinal">€ 0.00</span>
             </div>
             <div class="result-item">
               <span class="result-label"
-                >Total deductions / Deduções totais</span
+                >Total deductions (Deduções totais)</span
               >
               <span class="result-value" id="totalDeductions">€ 0.00</span>
             </div>
-            <div class="result-item final-highlight">
-              <span class="result-label"
-                >Rendimento líquido final (Final take-home income)</span
+            <div class="result-item">
+              <span class="result-label bold-label"
+                >Total effective rate (Taxa efetiva total)</span
               >
-              <span class="result-value" id="finalTakeHome">€ 0.00</span>
+              <span class="result-value bold-label" id="totalEffectiveRate"
+                >0.00%</span
+              >
             </div>
-            <div class="result-item info">
-              <span class="result-label"
-                >Taxa efetiva total (Total effective rate)</span
+            <div class="result-item final-highlight">
+              <span class="result-label bold-label"
+                >Final take-home income (Rendimento líquido final)</span
               >
-              <span class="result-value" id="totalEffectiveRate">0.00%</span>
+              <span class="result-value bold-label" id="finalTakeHome"
+                >€ 0.00</span
+              >
             </div>
           </div>
         </div>
@@ -415,7 +423,7 @@ import { SITE_TITLE } from "../../consts";
         background: white;
         border: 1px solid rgb(226, 232, 240);
         border-radius: 12px;
-        padding: 2rem;
+        padding: 1.25rem;
         margin-bottom: 1.5rem;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
       }
@@ -450,8 +458,8 @@ import { SITE_TITLE } from "../../consts";
       }
 
       .form-section {
-        margin-bottom: 2rem;
-        padding-bottom: 2rem;
+        margin-bottom: 1.25rem;
+        padding-bottom: 1.25rem;
         border-bottom: 1px solid rgb(226, 232, 240);
       }
 
@@ -462,13 +470,13 @@ import { SITE_TITLE } from "../../consts";
       }
 
       .form-section h2 {
-        font-size: 1.25rem;
-        margin-bottom: 1rem;
+        font-size: 1.125rem;
+        margin-bottom: 0.75rem;
         color: rgb(15, 23, 42);
       }
 
       .form-group {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
       }
 
       .form-group:last-child {
@@ -477,23 +485,24 @@ import { SITE_TITLE } from "../../consts";
 
       label {
         display: block;
-        font-weight: 500;
-        margin-bottom: 0.5rem;
+        font-weight: 400;
+        margin-bottom: 0.375rem;
         color: rgb(51, 65, 85);
+        font-size: 0.9375rem;
       }
 
       input[type="number"] {
         width: 100%;
-        padding: 0.75rem;
+        padding: 0.5rem 0.75rem;
         border: 1px solid rgb(203, 213, 225);
         border-radius: 6px;
-        font-size: 1rem;
+        font-size: 0.9375rem;
         transition: border-color 0.2s;
       }
 
       input[type="number"]:focus {
         outline: none;
-        border-color: #008C45;
+        border-color: var(--accent);
         box-shadow: 0 0 0 3px rgba(0, 140, 69, 0.1);
       }
 
@@ -518,28 +527,32 @@ import { SITE_TITLE } from "../../consts";
       }
 
       .results-card h2 {
-        font-size: 1.5rem;
-        margin-bottom: 1.5rem;
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
         color: rgb(15, 23, 42);
       }
 
       .results-grid {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 0.625rem;
       }
 
       .result-item {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1rem;
+        padding: 0.625rem 0.875rem;
         background: rgb(248, 250, 252);
         border-radius: 8px;
       }
 
       .result-item.highlight {
-        background: linear-gradient(135deg, #008C45 0%, #007038 100%);
+        background: linear-gradient(
+          135deg,
+          var(--accent) 0%,
+          var(--accent-dark) 100%
+        );
         color: white;
       }
 
@@ -548,43 +561,45 @@ import { SITE_TITLE } from "../../consts";
         color: white;
       }
 
-      .result-item.info {
-        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-        color: white;
-      }
-
-      .result-item.info .result-label,
-      .result-item.info .result-value {
-        color: white;
-      }
-
       .result-item.final-highlight {
         background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
         color: white;
-        font-size: 1.1rem;
       }
 
       .result-item.final-highlight .result-label,
       .result-item.final-highlight .result-value {
         color: white;
+      }
+
+      .result-item.final-highlight .result-label.bold-label {
         font-weight: 700;
       }
 
       .final-results {
-        border: 2px solid #008C45;
+        border: 2px solid var(--accent);
       }
 
       .result-label {
-        font-weight: 500;
+        font-weight: 400;
         color: rgb(71, 85, 105);
         flex: 1;
+        font-size: 1rem;
+      }
+
+      .result-label.bold-label {
+        font-weight: 700;
+        color: rgb(0, 0, 0);
       }
 
       .result-value {
-        font-size: 1.25rem;
-        font-weight: 600;
+        font-size: 1rem;
+        font-weight: 400;
         color: rgb(15, 23, 42);
         text-align: right;
+      }
+
+      .result-value.bold-label {
+        font-weight: 700;
       }
 
       .formula-card h3 {
@@ -597,7 +612,7 @@ import { SITE_TITLE } from "../../consts";
         background: rgb(248, 250, 252);
         padding: 1.5rem;
         border-radius: 8px;
-        border-left: 4px solid #008C45;
+        border-left: 4px solid var(--accent);
       }
 
       .formula p {
@@ -635,7 +650,7 @@ import { SITE_TITLE } from "../../consts";
       }
 
       .disclaimer a {
-        color: #008C45;
+        color: var(--accent);
         font-weight: 500;
       }
 

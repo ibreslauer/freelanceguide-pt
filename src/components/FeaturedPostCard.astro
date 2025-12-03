@@ -1,0 +1,98 @@
+---
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+import { getBaseUrl } from "../utils";
+
+interface Props {
+  post: CollectionEntry<"blog">;
+}
+
+const { post } = Astro.props;
+const base = getBaseUrl();
+---
+
+<div class="bento-item featured">
+  <a href={`${base}blog/${post.id}/`}>
+    {
+      post.data.heroImage && (
+        <Image
+          width={1200}
+          height={800}
+          src={post.data.heroImage}
+          alt={post.data.title}
+        />
+      )
+    }
+    <div class="bento-content">
+      <div class="post-title">{post.data.title}</div>
+    </div>
+  </a>
+</div>
+
+<style>
+  .bento-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+    height: 420px;
+  }
+
+  .bento-item a {
+    display: block;
+    text-decoration: none;
+    height: 100%;
+    color: inherit;
+  }
+
+  .bento-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0;
+    box-shadow: none !important;
+  }
+
+  .bento-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 3rem;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.4) 70%,
+      transparent 100%
+    );
+  }
+
+  .post-title {
+    margin: 0;
+    color: white;
+    line-height: 1.3;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+
+  @media (max-width: 1024px) {
+    .post-title {
+      font-size: 1.75rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .bento-item {
+      min-height: 300px;
+    }
+
+    .bento-content {
+      padding: 2rem;
+    }
+
+    .post-title {
+      font-size: 1.5rem;
+    }
+  }
+</style>
