@@ -17,7 +17,7 @@ This website is built with [Astro](https://astro.build), a modern static site ge
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm or pnpm
 
 ### Installation
@@ -29,7 +29,7 @@ npm install
 ### Development
 
 ```bash
-npm run dev
+yarn dev
 ```
 
 Visit `http://localhost:4321` to view the site locally.
@@ -37,7 +37,7 @@ Visit `http://localhost:4321` to view the site locally.
 ### Build
 
 ```bash
-npm run build
+yarn build
 ```
 
 The production-ready site will be generated in the `./dist/` directory.
@@ -57,14 +57,14 @@ The production-ready site will be generated in the `./dist/` directory.
 
 ## 🧞 Available Commands
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+| Command                | Action                                           |
+| :--------------------- | :----------------------------------------------- |
+| `npm install`          | Installs dependencies                            |
+| `yarn dev`             | Starts local dev server at `localhost:4321`      |
+| `yarn build`           | Build your production site to `./dist/`          |
+| `yarn preview`         | Preview your build locally, before deploying     |
+| `yarn astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `yarn astro -- --help` | Get help using the Astro CLI                     |
 
 ## 🤝 Contributing
 
